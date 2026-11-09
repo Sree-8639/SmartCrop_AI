@@ -30,85 +30,102 @@ def apply_custom_theme():
         background: transparent !important;
     }
 
-    [data-testid="stSidebarCollapseButton"] {
+    /* Collapse button (inside sidebar) */
+    [data-testid="stSidebarCollapseButton"],
+    [data-testid="stSidebarHeader"] button {
         margin-left: auto !important;
-        opacity: 0.85 !important;
+        opacity: 0.9 !important;
         visibility: visible !important;
-    }
-
-    [data-testid="stSidebarCollapseButton"] button {
-        background: rgba(16, 185, 129, 0.12) !important;
-        border: 1px solid rgba(16, 185, 129, 0.35) !important;
+        background: rgba(16, 185, 129, 0.15) !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
         border-radius: 8px !important;
         padding: 4px 8px !important;
         transition: all 0.2s ease !important;
         cursor: pointer !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    [data-testid="stSidebarCollapseButton"] button:hover {
-        background: rgba(16, 185, 129, 0.25) !important;
-        border-color: #34d399 !important;
-    }
-
-    [data-testid="stSidebarCollapseButton"] button [data-testid="stIconMaterial"] {
-        font-size: 0px !important;
-        line-height: 0 !important;
         display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
-        color: transparent !important;
     }
 
-    [data-testid="stSidebarCollapseButton"] button [data-testid="stIconMaterial"]::after {
-        content: "«" !important;
-        font-size: 20px !important;
-        font-weight: 700 !important;
-        line-height: 1 !important;
-        color: #34d399 !important;
-        display: inline-block !important;
+    [data-testid="stSidebarCollapseButton"]:hover,
+    [data-testid="stSidebarHeader"] button:hover {
+        background: rgba(16, 185, 129, 0.3) !important;
+        border-color: #34d399 !important;
     }
 
-    /* Sidebar collapsed trigger button (when sidebar is hidden) */
-    [data-testid="stSidebarCollapsedControl"] {
-        top: 14px !important;
-        left: 14px !important;
-    }
-
+    /* Expand button (top-left when sidebar is collapsed) */
+    button[data-testid="stExpandSidebarButton"],
     [data-testid="stSidebarCollapsedControl"] button {
-        background: #ecfdf5 !important;
-        border: 1.5px solid #a7f3d0 !important;
+        background: #064e3b !important;
+        border: 1.5px solid #10b981 !important;
         border-radius: 8px !important;
         padding: 6px 10px !important;
-        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2) !important;
-        transition: all 0.2s ease !important;
+        margin: 10px 0 0 12px !important;
+        box-shadow: 0 4px 14px rgba(6, 78, 59, 0.35) !important;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
         cursor: pointer !important;
-        display: flex !important;
+        display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
     }
 
+    button[data-testid="stExpandSidebarButton"]:hover,
     [data-testid="stSidebarCollapsedControl"] button:hover {
-        background: #d1fae5 !important;
+        background: #047857 !important;
         border-color: #34d399 !important;
         transform: scale(1.05) !important;
+        box-shadow: 0 6px 18px rgba(16, 185, 129, 0.4) !important;
     }
 
-    [data-testid="stSidebarCollapsedControl"] button [data-testid="stIconMaterial"] {
+    /* Total elimination of raw text ligature bleeds: keyboard_double_arrow_left/right */
+    [data-testid="stSidebarCollapseButton"] [data-testid="stIconMaterial"],
+    [data-testid="stSidebarHeader"] button [data-testid="stIconMaterial"],
+    button[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"],
+    [data-testid="stSidebarCollapsedControl"] [data-testid="stIconMaterial"] {
         font-size: 0px !important;
         line-height: 0 !important;
         color: transparent !important;
+        visibility: hidden !important;
+        position: relative !important;
+        width: 22px !important;
+        height: 22px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: visible !important;
     }
 
-    [data-testid="stSidebarCollapsedControl"] button [data-testid="stIconMaterial"]::after {
+    /* Render crisp unicode double arrow glyphs */
+    [data-testid="stSidebarCollapseButton"] [data-testid="stIconMaterial"]::after,
+    [data-testid="stSidebarHeader"] button [data-testid="stIconMaterial"]::after {
+        content: "«" !important;
+        font-size: 22px !important;
+        font-weight: 800 !important;
+        line-height: 1 !important;
+        color: #34d399 !important;
+        visibility: visible !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    button[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"]::after,
+    [data-testid="stSidebarCollapsedControl"] [data-testid="stIconMaterial"]::after {
         content: "»" !important;
         font-size: 22px !important;
         font-weight: 800 !important;
         line-height: 1 !important;
-        color: #047857 !important;
-        display: inline-block !important;
+        color: #ecfdf5 !important;
+        visibility: visible !important;
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
     }
 
     /* Main background */

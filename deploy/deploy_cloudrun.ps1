@@ -36,3 +36,4 @@ gcloud run deploy $SERVICE_NAME `
     --timeout 300
 
 Write-Host "`nDeployment complete! Service URL above." -ForegroundColor Green
+

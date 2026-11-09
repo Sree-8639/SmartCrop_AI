@@ -32,3 +32,4 @@ gcloud run deploy "${SERVICE_NAME}" \
     --timeout 300
 
 echo -e "\nDeployment complete! Service URL above."
+
