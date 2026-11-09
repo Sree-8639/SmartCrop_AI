@@ -1,0 +1,16 @@
+metric,value
+"1. Accuracy - Training (image-level, 1500 img sample)",89.93 %
+1. Accuracy - Validation (image-level),74.34 %
+2. Precision - image-level (weighted / macro),73.94 % / 62.07 %
+2. Precision - detection-level (IoU>=0.5),68.51 %
+3. Recall - image-level (weighted / macro),74.34 % / 58.52 %
+3. Recall - detection-level (IoU>=0.5),73.29 %
+4. F1-Score - detection-level (overall),70.82 %
+5. Macro F1 - image-level / detection-level,58.62 % / 56.87 %
+6. Weighted F1 - image-level / detection-level,73.17 % / 69.94 %
+7. mAP@0.50 / mAP@0.50:0.95,65.33 % / 41.18 %
+8. Average Precision (AP) - see per_class_AP.csv,best: Rice Stemfly 99.5% | worst: alfalfa seed chalcid 3.3%
+9. IoU - mean of matched boxes / mean best-IoU per GT,0.811 / 0.742
+10. Confusion Matrix,"saved: confusion_matrix_top20.png, confusion_matrix_full.csv"
+11. Cohen's Kappa (image-level),0.7313
+"12. Inference time / FPS (per image, 1 img batch)",30.9 ms / 32.4 FPS  (Ultralytics val: 6.2 ms)

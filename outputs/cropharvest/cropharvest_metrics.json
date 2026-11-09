@@ -1,0 +1,160 @@
+{
+  "architecture": "CropHarvestBiLSTM",
+  "training_time_seconds": 1.88,
+  "epochs_trained": 2,
+  "best_epoch": 1,
+  "validation_split": {
+    "loss": 0.5426756292581558,
+    "accuracy": 0.765625,
+    "macro_precision": 0.3828125,
+    "macro_recall": 0.5,
+    "macro_f1": 0.4336283185840708,
+    "weighted_f1": 0.6639933628318584,
+    "per_class": {
+      "non_crop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 15
+      },
+      "crop": {
+        "precision": 0.765625,
+        "recall": 1.0,
+        "f1": 0.8672566371681416,
+        "support": 49
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        49
+      ]
+    ],
+    "total_samples": 64
+  },
+  "official_held_out_test_split": {
+    "loss": 1.0997716188430786,
+    "accuracy": 0.25,
+    "macro_precision": 0.125,
+    "macro_recall": 0.5,
+    "macro_f1": 0.2,
+    "weighted_f1": 0.1,
+    "per_class": {
+      "non_crop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 24
+      },
+      "crop": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "support": 8
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        24
+      ],
+      [
+        0,
+        8
+      ]
+    ],
+    "total_samples": 32
+  },
+  "togo_regional_testbed": {
+    "loss": 1.0078357851583195,
+    "accuracy": 0.3464052287581699,
+    "macro_precision": 0.17320261437908496,
+    "macro_recall": 0.5,
+    "macro_f1": 0.25728155339805825,
+    "weighted_f1": 0.17824735072022335,
+    "per_class": {
+      "non_crop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 200
+      },
+      "crop": {
+        "precision": 0.3464052287581699,
+        "recall": 1.0,
+        "f1": 0.5145631067961165,
+        "support": 106
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        200
+      ],
+      [
+        0,
+        106
+      ]
+    ],
+    "total_samples": 306
+  },
+  "china_regional_testbed": {
+    "loss": 0.7828991381531551,
+    "accuracy": 0.5330907436888788,
+    "macro_precision": 0.4881585670658042,
+    "macro_recall": 0.49875643775886747,
+    "macro_f1": 0.3694443053228033,
+    "weighted_f1": 0.3927493115008292,
+    "per_class": {
+      "non_crop": {
+        "precision": 0.4406779661016949,
+        "recall": 0.02550269740068661,
+        "f1": 0.04821511358368104,
+        "support": 2039
+      },
+      "crop": {
+        "precision": 0.5356391680299135,
+        "recall": 0.9720101781170484,
+        "f1": 0.6906734970619256,
+        "support": 2358
+      }
+    },
+    "confusion_matrix": [
+      [
+        52,
+        1987
+      ],
+      [
+        66,
+        2292
+      ]
+    ],
+    "total_samples": 4397
+  },
+  "history": {
+    "train_loss": [
+      0.5592123046517372,
+      0.16638722084462643
+    ],
+    "val_loss": [
+      0.5426756292581558,
+      0.6268367730081081
+    ],
+    "train_acc": [
+      0.6640625,
+      1.0
+    ],
+    "val_acc": [
+      0.765625,
+      0.765625
+    ],
+    "val_macro_f1": [
+      0.4336283185840708,
+      0.4336283185840708
+    ]
+  }
+}

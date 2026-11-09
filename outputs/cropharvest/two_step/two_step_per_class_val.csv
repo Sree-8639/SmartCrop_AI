@@ -1,0 +1,11 @@
+class,precision,recall,f1,val_samples
+cereals,0.769,0.895,0.827,2647
+other,0.798,0.712,0.753,1679
+fruits_nuts,0.684,0.731,0.707,821
+vegetables_melons,0.667,0.708,0.687,751
+oilseeds,0.626,0.417,0.501,573
+leguminous,0.694,0.526,0.598,367
+root_tuber,0.592,0.442,0.506,233
+beverage_spice,0.737,0.236,0.357,178
+sugar,0.867,0.872,0.87,149
+non_crop,0.677,0.742,0.708,1098

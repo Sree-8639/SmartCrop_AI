@@ -1,0 +1,33 @@
+{
+  "train": {
+    "split": "train",
+    "image_count": 17646,
+    "label_count": 17646,
+    "missing_label_count": 0,
+    "empty_label_count": 0,
+    "total_boxes": 20661,
+    "invalid_box_count": 1,
+    "corrupted_images_sampled": 0,
+    "sample_checked": 500,
+    "active_classes_in_split": 97,
+    "invalid_boxes_sample": [
+      {
+        "img": "IP046000898.jpg",
+        "reason": "Non-positive dimensions (w=0.0, h=0.0125)"
+      }
+    ]
+  },
+  "val": {
+    "split": "val",
+    "image_count": 1329,
+    "label_count": 1329,
+    "missing_label_count": 0,
+    "empty_label_count": 0,
+    "total_boxes": 1621,
+    "invalid_box_count": 0,
+    "corrupted_images_sampled": 0,
+    "sample_checked": 500,
+    "active_classes_in_split": 94,
+    "invalid_boxes_sample": []
+  }
+}

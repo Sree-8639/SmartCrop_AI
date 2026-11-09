@@ -1,0 +1,37 @@
+{
+  "metrics": {
+    "Training": {
+      "accuracy": 0.8594705882352941,
+      "macro_precision": 0.8649428129587253,
+      "macro_recall": 0.8138950997781065,
+      "macro_f1": 0.8344342790215112,
+      "weighted_precision": 0.8608510823862229,
+      "weighted_recall": 0.8594705882352941,
+      "weighted_f1": 0.8575619358665698
+    },
+    "Validation": {
+      "accuracy": 0.7430555555555556,
+      "macro_precision": 0.7174823627041225,
+      "macro_recall": 0.6474556515880798,
+      "macro_f1": 0.6674982333241998,
+      "weighted_precision": 0.7404427116408765,
+      "weighted_recall": 0.7430555555555556,
+      "weighted_f1": 0.7356161603039391
+    },
+    "Official Test": {
+      "accuracy": 0.6822429906542056,
+      "macro_precision": 0.3651945956846138,
+      "macro_recall": 0.33631436314363145,
+      "macro_f1": 0.3213664073879128,
+      "weighted_precision": 0.5796258289940126,
+      "weighted_recall": 0.6822429906542056,
+      "weighted_f1": 0.5940155714047785
+    }
+  },
+  "family_val_acc": {
+    "Transformer": 0.728578154425612,
+    "CNN1D": 0.7294020715630886,
+    "BiGRU": 0.7323446327683616,
+    "LightGBM": 0.7391713747645952
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "pipeline": "CropHarvest_10Class_Classification",
+  "task": "10-Class Classification (9 FAO Crop Categories + 1 Land-Cover Class)",
+  "best_architecture": "Multi-Model Family Ensemble (Transformer + 1D-CNN + BiGRU + LightGBM)",
+  "classes": [
+    "cereals",
+    "other",
+    "fruits_nuts",
+    "vegetables_melons",
+    "oilseeds",
+    "leguminous",
+    "root_tuber",
+    "beverage_spice",
+    "sugar",
+    "non_crop"
+  ],
+  "class_types": {
+    "cereals": "Crop Category",
+    "other": "Crop Category",
+    "fruits_nuts": "Crop Category",
+    "vegetables_melons": "Crop Category",
+    "oilseeds": "Crop Category",
+    "leguminous": "Crop Category",
+    "root_tuber": "Crop Category",
+    "beverage_spice": "Crop Category",
+    "sugar": "Crop Category",
+    "non_crop": "Land-Cover Class (Non-Agricultural)"
+  },
+  "status": "Kaggle Benchmark Evaluation Complete",
+  "hardware": "cuda",
+  "timestamp": "2026-11-08 23:34:01 UTC",
+  "held_out_test_results": {
+    "accuracy": 0.6822,
+    "macro_f1": 0.3214,
+    "evaluation_frequency": "evaluated_once_at_final_audit"
+  },
+  "benchmarks": {
+    "family_ensemble": {
+      "name": "Multi-Model Family Ensemble (Transformer, CNN1D, BiGRU, LightGBM)",
+      "train_acc": 0.8595,
+      "val_acc": 0.7431,
+      "test_acc": 0.6822,
+      "test_macro_f1": 0.3214,
+      "family_val_acc": {
+        "LightGBM": 0.7392,
+        "BiGRU": 0.7323,
+        "CNN1D": 0.7294,
+        "Transformer": 0.7286
+      }
+    },
+    "direct_10class_ensemble": {
+      "name": "Direct 10-Class BiLSTM Ensemble",
+      "train_acc": 0.9336,
+      "val_acc": 0.7420,
+      "test_acc": 0.6729,
+      "test_macro_f1": 0.3239
+    },
+    "two_step_hierarchical": {
+      "name": "Two-Step Hierarchical (Binary Filter -> 9-Crop)",
+      "train_acc": 0.8721,
+      "val_acc": 0.7319,
+      "test_acc": 0.5607,
+      "test_macro_f1": 0.2382,
+      "step1_binary_test_acc": 0.8243
+    }
+  },
+  "per_class_validation_breakdown": {
+    "cereals": { "precision": 0.778, "recall": 0.898, "f1": 0.834, "val_samples": 2647 },
+    "other": { "precision": 0.818, "recall": 0.717, "f1": 0.764, "val_samples": 1679 },
+    "fruits_nuts": { "precision": 0.682, "recall": 0.755, "f1": 0.717, "val_samples": 821 },
+    "vegetables_melons": { "precision": 0.684, "recall": 0.736, "f1": 0.709, "val_samples": 751 },
+    "oilseeds": { "precision": 0.617, "recall": 0.438, "f1": 0.512, "val_samples": 573 },
+    "leguminous": { "precision": 0.695, "recall": 0.564, "f1": 0.623, "val_samples": 367 },
+    "root_tuber": { "precision": 0.621, "recall": 0.464, "f1": 0.531, "val_samples": 233 },
+    "beverage_spice": { "precision": 0.727, "recall": 0.270, "f1": 0.393, "val_samples": 178 },
+    "sugar": { "precision": 0.847, "recall": 0.893, "f1": 0.869, "val_samples": 149 },
+    "non_crop": { "precision": 0.706, "recall": 0.740, "f1": 0.723, "val_samples": 1098 }
+  }
+}

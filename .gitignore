@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# Datasets and raw caches
+data/
+datasets/
+*.zip
+*.tar.gz
+*.tif
+*.tiff
+*.h5
+*.npy
+
+# Temporary files, documents & scratch scripts
+scratch/
+*.docx
+*.xlsx
+Thumbs.db
+.DS_Store
+
+# Streamlit Local Cache (Preserve config.toml for production styling)
+.streamlit/*
+!.streamlit/config.toml
+
+# Environment variables
+.env

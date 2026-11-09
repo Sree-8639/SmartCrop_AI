@@ -1,0 +1,72 @@
+[
+  {
+    "class": "cereals",
+    "precision": 0.778,
+    "recall": 0.898,
+    "f1": 0.834,
+    "val_samples": 2647
+  },
+  {
+    "class": "other",
+    "precision": 0.818,
+    "recall": 0.717,
+    "f1": 0.764,
+    "val_samples": 1679
+  },
+  {
+    "class": "fruits_nuts",
+    "precision": 0.682,
+    "recall": 0.755,
+    "f1": 0.717,
+    "val_samples": 821
+  },
+  {
+    "class": "vegetables_melons",
+    "precision": 0.684,
+    "recall": 0.736,
+    "f1": 0.709,
+    "val_samples": 751
+  },
+  {
+    "class": "oilseeds",
+    "precision": 0.617,
+    "recall": 0.438,
+    "f1": 0.512,
+    "val_samples": 573
+  },
+  {
+    "class": "leguminous",
+    "precision": 0.695,
+    "recall": 0.564,
+    "f1": 0.623,
+    "val_samples": 367
+  },
+  {
+    "class": "root_tuber",
+    "precision": 0.621,
+    "recall": 0.464,
+    "f1": 0.531,
+    "val_samples": 233
+  },
+  {
+    "class": "beverage_spice",
+    "precision": 0.727,
+    "recall": 0.27,
+    "f1": 0.393,
+    "val_samples": 178
+  },
+  {
+    "class": "sugar",
+    "precision": 0.847,
+    "recall": 0.893,
+    "f1": 0.869,
+    "val_samples": 149
+  },
+  {
+    "class": "non_crop",
+    "precision": 0.706,
+    "recall": 0.74,
+    "f1": 0.723,
+    "val_samples": 1098
+  }
+]

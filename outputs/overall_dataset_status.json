@@ -1,0 +1,35 @@
+{
+  "audit_timestamp": "2026-11-06",
+  "datasets": {
+    "plantdoc": {
+      "status": "VALIDATED",
+      "total_raw_images": 2573,
+      "clean_images": 2549,
+      "reliable_classes": 27,
+      "training_ready": true
+    },
+    "cropharvest": {
+      "status": "VALIDATED",
+      "total_arrays_h5": 87464,
+      "total_geojson_features": 113893,
+      "task_sufficiency": "SUFFICIENT FOR PLANNED SATELLITE CROP CLASSIFICATION",
+      "training_ready": true
+    },
+    "ip102": {
+      "status": "DETECTION_ARCHIVES_PRESENT_PENDING_EXTRACTION",
+      "training_blocked": true,
+      "missing_data": {
+        "classification_images": "MISSING (Required: 75,222 classification images)",
+        "classification_split_lists": "MISSING (Required: train.txt, val.txt, test.txt)",
+        "detection_archives": "VERIFIED_PRESENT (Annotations.tar, JPEGImages.tar)",
+        "detection_extraction": "PENDING_USER_APPROVAL (~782.5 MB disk space needed)"
+      },
+      "training_ready": false
+    }
+  },
+  "governance_rules": {
+    "strict_isolation": "PlantDoc, IP102, and CropHarvest datasets originate from disparate collection regimes and are never merged into a single training tensor or assumed to represent the same physical field.",
+    "vegetation_stress_distinction": "CropHarvest ground truth is strictly crop classification. NDVI is pre-computed; NDMI canopy moisture requires unscaling B08/B11 or real-time Sentinel-2 L2A tile access.",
+    "unverified_results_prohibition": "No accuracy or performance claims are made prior to actual execution."
+  }
+}

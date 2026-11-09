@@ -1,0 +1,10 @@
+,Binary,Binary,Binary,10-Class,10-Class,10-Class
+,Training,Validation,Official Test,Training,Validation,Official Test
+Accuracy,94.52,87.24,82.02,93.36,74.2,67.29
+Precision (macro),93.52,84.92,86.01,94.07,71.21,45.37
+Recall (macro),93.35,84.49,81.14,93.94,65.21,32.67
+F1 (macro),93.44,84.7,81.18,93.96,67.27,32.39
+Precision (weighted),94.51,87.17,85.45,93.42,73.86,72.65
+Recall (weighted),94.52,87.24,82.02,93.36,74.2,67.29
+F1 (weighted),94.51,87.2,81.38,93.33,73.55,60.08
+

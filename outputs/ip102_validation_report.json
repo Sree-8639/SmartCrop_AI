@@ -1,0 +1,138 @@
+{
+  "dataset_name": "IP102",
+  "dataset_path": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102",
+  "status": "DETECTION_ARCHIVES_PRESENT_PENDING_EXTRACTION",
+  "training_blocked": true,
+  "verified_existing_components": {
+    "classes_file_present": true,
+    "classes_defined_count": 102,
+    "pretrained_models_dir_present": true,
+    "archive_files_detected": [
+      "Detection\\VOC2007\\Annotations.tar",
+      "Detection\\VOC2007\\JPEGImages.tar"
+    ],
+    "downloads_folder_archives_detected": [
+      {
+        "name": "Classification-20261106T145742Z-1-003.zip",
+        "path": "C:\\Users\\shanm\\Downloads\\Classification-20261106T145742Z-1-003.zip",
+        "size_mb": 0.01,
+        "size_bytes": 10138
+      },
+      {
+        "name": "Detection-20261106T151505Z-1-001.zip",
+        "path": "C:\\Users\\shanm\\Downloads\\Detection-20261106T151505Z-1-001.zip",
+        "size_mb": 813.32,
+        "size_bytes": 852827550
+      },
+      {
+        "name": "IP102-master.zip",
+        "path": "C:\\Users\\shanm\\Downloads\\IP102-master.zip",
+        "size_mb": 0.0,
+        "size_bytes": 3072
+      }
+    ]
+  },
+  "archive_in_memory_audit": {
+    "archives": {
+      "Annotations.tar": {
+        "archive_path": "ip102\\Detection\\VOC2007\\Annotations.tar",
+        "file_count": 18983,
+        "archive_size_mb": 28.33,
+        "uncompressed_size_mb": 11.53,
+        "sample_entries": [
+          "Annotations/IP054000137.xml",
+          "Annotations/IP000000114.xml",
+          "Annotations/IP071002998.xml"
+        ],
+        "readable": true
+      },
+      "JPEGImages.tar": {
+        "archive_path": "ip102\\Detection\\VOC2007\\JPEGImages.tar",
+        "file_count": 18981,
+        "archive_size_mb": 784.82,
+        "uncompressed_size_mb": 770.93,
+        "sample_entries": [
+          "JPEGImages/IP074000054.jpg",
+          "JPEGImages/IP025000134.jpg",
+          "JPEGImages/IP102002092.jpg"
+        ],
+        "readable": true
+      }
+    },
+    "total_uncompressed_mb": 782.46,
+    "matching": {
+      "imagesets_total_ids": 18976,
+      "test_ids_count": 3798,
+      "trainval_ids_count": 15178,
+      "archive_xml_count": 18976,
+      "archive_img_count": 18981,
+      "xml_to_imagesets_match_count": 18976,
+      "img_to_imagesets_match_count": 18976,
+      "xml_and_img_overlap_count": 18976,
+      "complete_detection_coverage": true
+    }
+  },
+  "extraction_proposal": {
+    "status": "AWAITING_USER_APPROVAL",
+    "archives_to_extract": [
+      {
+        "archive": "datasets/ip102/Detection/VOC2007/Annotations.tar",
+        "compressed_size_mb": 28.33,
+        "uncompressed_size_mb": 11.53,
+        "target_directory": "datasets/ip102/Detection/VOC2007/Annotations",
+        "contents_summary": "18,976 PASCAL VOC XML annotation files matching trainval.txt + test.txt"
+      },
+      {
+        "archive": "datasets/ip102/Detection/VOC2007/JPEGImages.tar",
+        "compressed_size_mb": 784.82,
+        "uncompressed_size_mb": 770.93,
+        "target_directory": "datasets/ip102/Detection/VOC2007/JPEGImages",
+        "contents_summary": "18,981 JPEG image files matching detection annotations"
+      }
+    ],
+    "total_required_disk_space_mb": 782.46,
+    "total_required_disk_space_gb": 0.76,
+    "automatic_extraction_blocked": true,
+    "safety_guarantee": "No extraction will occur without explicit user approval."
+  },
+  "classification_subset": {
+    "images_present": false,
+    "total_images_detected": 0,
+    "split_lists_present": false,
+    "train_list_present": false,
+    "val_list_present": false,
+    "test_list_present": false,
+    "status": "MISSING_DOWNLOAD_PENDING",
+    "note": "Requires 75,222 classification images archive and train/val/test split lists."
+  },
+  "detection_subset": {
+    "boxes_present": true,
+    "boxes_extracted": false,
+    "annotation_format": "PASCAL_VOC_XML_IN_ARCHIVE",
+    "images_with_bounding_boxes": 18976,
+    "total_bounding_boxes": 0,
+    "unmatched_annotations_count": 0,
+    "note": "Exactly 18,976 images have bounding boxes in the Detection subset (100% matching VOC2007 ImageSets). We do not claim all 75,222 images have bounding boxes."
+  },
+  "missing_requirements_checklist": {
+    "classification_images": "MISSING (Required: 75,222 classification images)",
+    "classification_split_lists": "MISSING (Required: train.txt, val.txt, test.txt)",
+    "detection_archives": "VERIFIED_PRESENT (Annotations.tar, JPEGImages.tar)",
+    "detection_extraction": "PENDING_USER_APPROVAL (~782.5 MB disk space needed)"
+  },
+  "yolo_conversion_plan": {
+    "source_format": "PASCAL_VOC_XML_IN_ARCHIVE",
+    "target_format": "YOLO_TXT (<class_id> <x_center> <y_center> <width> <height> normalized)",
+    "conversion_ready": false,
+    "pending_prerequisite": "User approval for tar archive extraction",
+    "target_directory_layout": {
+      "images": "datasets/ip102/yolo/images/{train,val,test}/",
+      "labels": "datasets/ip102/yolo/labels/{train,val,test}/"
+    }
+  },
+  "warnings": [
+    "Detection archives are present and verified in-memory, but not extracted to avoid automatic disk writes.",
+    "Classification images (75,222 images) and split lists are missing/downloading.",
+    "Model training for IP102 is strictly blocked until images and bounding boxes are extracted and validated."
+  ]
+}

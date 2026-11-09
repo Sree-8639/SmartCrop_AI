@@ -1,0 +1,240 @@
+{
+  "experiment_name": "Experiment_B_Fixed_Advanced_Pipeline",
+  "model_architecture": "EfficientNet-B0",
+  "resolution": [
+    288,
+    288
+  ],
+  "best_global_epoch": 28,
+  "primary_selection_metric": "validation_accuracy",
+  "tie_breaker_metric": "validation_macro_f1",
+  "final_targets": {
+    "deterministic_train_accuracy_target": 0.8,
+    "validation_accuracy_target": 0.8,
+    "measured_checkpoint_deterministic_train_acc": 0.9310151430173864,
+    "measured_checkpoint_val_acc": 0.6919060052219321,
+    "train_target_met": true,
+    "val_target_met": false,
+    "overall_status": "NOT_REACHED"
+  },
+  "validation_results": {
+    "val_loss": 0.8620695299019079,
+    "val_accuracy": 0.6919060052219321,
+    "val_macro_f1": 0.6698178890173561,
+    "val_macro_precision": 0.6783920613355312,
+    "val_macro_recall": 0.675164595752831,
+    "val_weighted_f1": 0.6831796087978799
+  },
+  "held_out_test_results": {
+    "test_loss": 0.8322644185459644,
+    "test_accuracy": 0.6814621409921671,
+    "test_macro_f1": 0.6596754392321841
+  },
+  "per_class_report": {
+    "Apple Scab Leaf": {
+      "precision": 0.6,
+      "recall": 0.42857142857142855,
+      "f1-score": 0.5,
+      "support": 14.0
+    },
+    "Apple leaf": {
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1-score": 0.9333333333333333,
+      "support": 14.0
+    },
+    "Apple rust leaf": {
+      "precision": 0.9,
+      "recall": 0.6923076923076923,
+      "f1-score": 0.782608695652174,
+      "support": 13.0
+    },
+    "Bell_pepper leaf": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.5714285714285714,
+      "support": 9.0
+    },
+    "Bell_pepper leaf spot": {
+      "precision": 0.5333333333333333,
+      "recall": 0.7272727272727273,
+      "f1-score": 0.6153846153846154,
+      "support": 11.0
+    },
+    "Blueberry leaf": {
+      "precision": 0.7727272727272727,
+      "recall": 1.0,
+      "f1-score": 0.8717948717948718,
+      "support": 17.0
+    },
+    "Cherry leaf": {
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.7058823529411765,
+      "support": 9.0
+    },
+    "Corn Gray leaf spot": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6,
+      "f1-score": 0.631578947368421,
+      "support": 10.0
+    },
+    "Corn leaf blight": {
+      "precision": 0.8,
+      "recall": 0.8571428571428571,
+      "f1-score": 0.8275862068965517,
+      "support": 28.0
+    },
+    "Corn rust leaf": {
+      "precision": 0.7777777777777778,
+      "recall": 0.8235294117647058,
+      "f1-score": 0.8,
+      "support": 17.0
+    },
+    "Peach leaf": {
+      "precision": 1.0,
+      "recall": 0.7647058823529411,
+      "f1-score": 0.8666666666666667,
+      "support": 17.0
+    },
+    "Potato leaf early blight": {
+      "precision": 0.4,
+      "recall": 0.35294117647058826,
+      "f1-score": 0.375,
+      "support": 17.0
+    },
+    "Potato leaf late blight": {
+      "precision": 0.375,
+      "recall": 0.4,
+      "f1-score": 0.3870967741935484,
+      "support": 15.0
+    },
+    "Raspberry leaf": {
+      "precision": 0.9,
+      "recall": 1.0,
+      "f1-score": 0.9473684210526315,
+      "support": 18.0
+    },
+    "Soyabean leaf": {
+      "precision": 0.8888888888888888,
+      "recall": 0.8,
+      "f1-score": 0.8421052631578947,
+      "support": 10.0
+    },
+    "Squash Powdery mildew leaf": {
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1-score": 0.975609756097561,
+      "support": 20.0
+    },
+    "Strawberry leaf": {
+      "precision": 0.9333333333333333,
+      "recall": 1.0,
+      "f1-score": 0.9655172413793104,
+      "support": 14.0
+    },
+    "Tomato Early blight leaf": {
+      "precision": 0.35714285714285715,
+      "recall": 0.38461538461538464,
+      "f1-score": 0.37037037037037035,
+      "support": 13.0
+    },
+    "Tomato Septoria leaf spot": {
+      "precision": 0.5185185185185185,
+      "recall": 0.6363636363636364,
+      "f1-score": 0.5714285714285714,
+      "support": 22.0
+    },
+    "Tomato leaf": {
+      "precision": 0.5,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.5714285714285714,
+      "support": 9.0
+    },
+    "Tomato leaf bacterial spot": {
+      "precision": 0.2,
+      "recall": 0.125,
+      "f1-score": 0.15384615384615385,
+      "support": 16.0
+    },
+    "Tomato leaf late blight": {
+      "precision": 0.5789473684210527,
+      "recall": 0.6470588235294118,
+      "f1-score": 0.6111111111111112,
+      "support": 17.0
+    },
+    "Tomato leaf mosaic virus": {
+      "precision": 0.25,
+      "recall": 0.125,
+      "f1-score": 0.16666666666666666,
+      "support": 8.0
+    },
+    "Tomato leaf yellow virus": {
+      "precision": 0.7777777777777778,
+      "recall": 0.6363636363636364,
+      "f1-score": 0.7,
+      "support": 11.0
+    },
+    "Tomato mold leaf": {
+      "precision": 0.6,
+      "recall": 0.42857142857142855,
+      "f1-score": 0.5,
+      "support": 14.0
+    },
+    "grape leaf": {
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1-score": 0.9523809523809523,
+      "support": 10.0
+    },
+    "grape leaf black rot": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1-score": 0.8888888888888888,
+      "support": 10.0
+    },
+    "accuracy": 0.6919060052219321,
+    "macro avg": {
+      "precision": 0.6783920613355312,
+      "recall": 0.675164595752831,
+      "f1-score": 0.6698178890173561,
+      "support": 383.0
+    },
+    "weighted avg": {
+      "precision": 0.6870990293863732,
+      "recall": 0.6919060052219321,
+      "f1-score": 0.6831796087978799,
+      "support": 383.0
+    }
+  },
+  "confusion_matrix": [
+    [6, 2, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [2, 0, 9, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 6, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 2, 6, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 6, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 2, 24, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 2, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 1, 0, 2, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 6, 5, 0, 0, 0, 0, 4, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 5, 6, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 5, 2, 0, 2, 2, 0, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 14, 2, 3, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 1, 1, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 6, 0, 2, 1, 2, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 1, 0, 0, 0, 0, 11, 0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 7, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 1, 2, 0, 0, 6, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 8]
+  ]
+}
+

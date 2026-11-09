@@ -1,0 +1,33 @@
+{
+  "chosen": "Ensemble",
+  "metrics": {
+    "Training": {
+      "accuracy": 0.9451636319641885,
+      "macro_precision": 0.9352288536695583,
+      "macro_recall": 0.9334929592286263,
+      "macro_f1": 0.9343544404797481,
+      "weighted_precision": 0.9450634295132786,
+      "weighted_recall": 0.9451636319641885,
+      "weighted_f1": 0.9451088447682329
+    },
+    "Validation": {
+      "accuracy": 0.8724137931034482,
+      "macro_precision": 0.8492087124797181,
+      "macro_recall": 0.8448987111765986,
+      "macro_f1": 0.8469993453826745,
+      "weighted_precision": 0.8717015646715593,
+      "weighted_recall": 0.8724137931034482,
+      "weighted_f1": 0.8720176943932388
+    },
+    "Official Test": {
+      "accuracy": 0.8201663201663202,
+      "macro_precision": 0.860058143346081,
+      "macro_recall": 0.8113688371125443,
+      "macro_f1": 0.8117507203368991,
+      "weighted_precision": 0.8544679214879307,
+      "weighted_recall": 0.8201663201663202,
+      "weighted_f1": 0.813819451858389
+    }
+  }
+}
+

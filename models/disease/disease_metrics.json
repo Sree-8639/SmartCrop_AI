@@ -1,0 +1,41 @@
+{
+  "model_name": "EfficientNet-B0_Exp_B_Fixed",
+  "boosted_model_name": "ConvNeXt-S_Exp_D_384px",
+  "dataset": "PlantDoc",
+  "dataset_version": "Cleaned & Audited (27 classes, 2,549 images)",
+  "num_classes": 27,
+  "last_updated": "2026-11-09T05:19:00Z",
+  "experiment_b_fixed": {
+    "architecture": "EfficientNet-B0",
+    "resolution": [288, 288],
+    "best_global_epoch": 28,
+    "deterministic_train_accuracy": 0.931015,
+    "validation_accuracy": 0.691906,
+    "validation_macro_f1": 0.669818,
+    "validation_macro_precision": 0.678392,
+    "validation_macro_recall": 0.675165,
+    "held_out_test_accuracy": 0.681462,
+    "held_out_test_macro_f1": 0.659675,
+    "checkpoint_path": "models/disease/disease_model_exp_B_fixed_best.pth",
+    "curves_path": "outputs/plantdoc_experiment_B_fixed_curves.png"
+  },
+  "experiment_d_boosted": {
+    "architecture": "ConvNeXt-Small (timm)",
+    "resolution": [384, 384],
+    "best_checkpoint": "epoch_16_ema",
+    "deterministic_train_accuracy": 0.9871,
+    "validation_accuracy": 0.7885,
+    "validation_macro_f1": 0.7699,
+    "validation_macro_precision": 0.7894,
+    "validation_macro_recall": 0.7740,
+    "held_out_test_accuracy": 0.8120,
+    "held_out_test_macro_f1": 0.8009,
+    "test_target_status": "EXCEEDED_80_PERCENT_ON_TEST"
+  },
+  "baseline_comparison": {
+    "legacy_baseline_accuracy": 0.6057,
+    "legacy_baseline_macro_f1": 0.5841,
+    "exp_b_fixed_delta_acc": "+8.62%",
+    "exp_d_boosted_delta_acc": "+18.28% (val) / +20.63% (test)"
+  }
+}

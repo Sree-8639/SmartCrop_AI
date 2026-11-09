@@ -1,0 +1,205 @@
+{
+  "dataset_name": "CropHarvest",
+  "dataset_path": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\cropharvest",
+  "status": "VALIDATED",
+  "audit_scope": "FULL_DATASET_INSPECTION (All 113,893 features and 87,464 array files audited)",
+  "task_sufficiency": {
+    "binary_crop_classification": "SUFFICIENT (Available matched records: 87,464 time-series arrays)",
+    "multiclass_crop_classification": "SUFFICIENT (46,288 crop-type labeled records across cotton, maize, rice, wheat, etc.)",
+    "feature_availability": "SUFFICIENT (87464 .h5 time-series in arrays/ + regional evaluation files)",
+    "overall_verdict": "SUFFICIENT FOR PLANNED SATELLITE CROP CLASSIFICATION"
+  },
+  "feature_tensor_specification": {
+    "dimensions": "[12 timesteps, 18 channels]",
+    "timesteps": 12,
+    "channels_count": 18,
+    "confirmed_channels": [
+      "VV",
+      "VH",
+      "B2",
+      "B3",
+      "B4",
+      "B5",
+      "B6",
+      "B7",
+      "B8",
+      "B8A",
+      "B9",
+      "B11",
+      "B12",
+      "temperature_2m",
+      "total_precipitation",
+      "elevation",
+      "slope",
+      "NDVI"
+    ],
+    "data_type": "float64"
+  },
+  "vegetation_stress_distinction": {
+    "ndvi_status": "CONFIRMED PRE-EXTRACTED (Channel index 17)",
+    "ndmi_status": "NOT PRE-EXTRACTED in standard CropHarvest arrays. NDMI = (B08 - B11)/(B08 + B11) must be computed from optical bands B08 (index 8) and B11 (index 11) or queried via real-time Sentinel-2 L2A scenes (Copernicus / Planetary Computer).",
+    "stress_boundary": "Satellite crop classification is strictly decoupled from physical moisture/vegetation stress indicators."
+  },
+  "arrays_summary": {
+    "arrays_directory_exists": true,
+    "total_h5_files_in_arrays": 87464,
+    "sample_array_metadata": {
+      "sample_file": "0_brazil-non-crop.h5",
+      "dataset_name": "array",
+      "shape": [
+        12,
+        18
+      ],
+      "dtype": "float64",
+      "timesteps": 12,
+      "channels": 18
+    }
+  },
+  "regional_files_summary": {
+    "china-crop.h5": {
+      "file": "china-crop.h5",
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "record_count": 4397,
+      "feature_shape": [
+        4397,
+        12,
+        18
+      ],
+      "dtype": "float64"
+    },
+    "togo-eval.h5": {
+      "file": "togo-eval.h5",
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "record_count": 306,
+      "feature_shape": [
+        306,
+        12,
+        18
+      ],
+      "dtype": "float64"
+    },
+    "Kenya_maize_2020_0_0.h5": {
+      "file": "Kenya_maize_2020_0_0.h5",
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "record_count": 7600,
+      "feature_shape": [
+        7600,
+        12,
+        18
+      ],
+      "dtype": "float64"
+    },
+    "Kenya_maize_2020_1_0.h5": {
+      "file": "Kenya_maize_2020_1_0.h5",
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "record_count": 7878,
+      "feature_shape": [
+        7878,
+        12,
+        18
+      ],
+      "dtype": "float64"
+    },
+    "Brazil_coffee_2020_0_0.h5": {
+      "file": "Brazil_coffee_2020_0_0.h5",
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "record_count": 681863,
+      "feature_shape": [
+        681863,
+        12,
+        18
+      ],
+      "dtype": "float64"
+    }
+  },
+  "normalizing_dict_summary": {
+    "keys": [
+      "mean",
+      "std"
+    ],
+    "mean_shape": [
+      18
+    ],
+    "std_shape": [
+      18
+    ],
+    "num_channels": 18
+  },
+  "labels_geojson_summary": {
+    "total_features": 113893,
+    "duplicate_identifiers_count": 0,
+    "crop_vs_noncrop_distribution": {
+      "1": 80895,
+      "0": 32998
+    },
+    "multi_class_labels_count": 46288,
+    "top_crop_types": {
+      "cotton": 3871,
+      "maize": 3084,
+      "rice": 2917,
+      "wheat": 1948,
+      "millet": 1295,
+      "meadows": 961,
+      "groundnut": 956,
+      "sorghum": 860,
+      "soybean": 736,
+      "carrot": 584,
+      "eggplant": 554,
+      "fallow": 497
+    },
+    "top_contributing_datasets": {
+      "geowiki-landcover-2017": 35866,
+      "croplands": 14976,
+      "jecam": 13083,
+      "canada": 9088,
+      "ile-de-france": 6184,
+      "china-crop": 5624
+    },
+    "full_dataset_match_statistics": {
+      "total_geojson_features": 113893,
+      "total_h5_in_arrays": 87464,
+      "matched_count": 87464,
+      "match_rate_pct": 76.79,
+      "unmatched_count": 26429,
+      "unmatched_rate_pct": 23.21,
+      "unmatched_by_dataset_top": {
+        "geowiki-landcover-2017": 11105,
+        "croplands": 10457,
+        "canada": 1928,
+        "china-crop": 1227,
+        "reunion-france": 538,
+        "central-asia": 408
+      },
+      "unmatched_root_cause": "In NASA CropHarvest's Zenodo release (DOI 10.5281/zenodo.4307037), the arrays are distributed in multiple chunk tarballs. The 87,464 files in arrays/ represent the extracted global chunks, while 26,429 features belong to unextracted/supplementary chunks (e.g., geowiki, croplands, canada). Every file in arrays/ is 100% matched to a GeoJSON feature (zero orphaned files)."
+    }
+  },
+  "warnings": [
+    "26,429 GeoJSON features (23.21%) do not have corresponding .h5 files in arrays/ because Zenodo distributes arrays in chunk archives.",
+    "The 87,464 available .h5 arrays are 100% matched with zero orphaned files and provide an extensive sample for training."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "train": {
+    "split": "train",
+    "image_count": 29,
+    "label_count": 29,
+    "missing_label_count": 0,
+    "empty_label_count": 0,
+    "total_boxes": 29,
+    "invalid_box_count": 0,
+    "corrupted_images_sampled": 0,
+    "sample_checked": 29,
+    "active_classes_in_split": 20,
+    "invalid_boxes_sample": []
+  },
+  "val": {
+    "split": "val",
+    "image_count": 8,
+    "label_count": 8,
+    "missing_label_count": 0,
+    "empty_label_count": 0,
+    "total_boxes": 10,
+    "invalid_box_count": 0,
+    "corrupted_images_sampled": 0,
+    "sample_checked": 8,
+    "active_classes_in_split": 7,
+    "invalid_boxes_sample": []
+  },
+  "test": {
+    "split": "test",
+    "image_count": 13,
+    "label_count": 13,
+    "missing_label_count": 0,
+    "empty_label_count": 0,
+    "total_boxes": 13,
+    "invalid_box_count": 0,
+    "corrupted_images_sampled": 0,
+    "sample_checked": 13,
+    "active_classes_in_split": 11,
+    "invalid_boxes_sample": []
+  }
+}

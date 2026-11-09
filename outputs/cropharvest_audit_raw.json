@@ -1,0 +1,304 @@
+{
+  "normalizing_dict": {
+    "keys": [
+      "mean",
+      "std"
+    ],
+    "mean": {
+      "shape": [
+        18
+      ],
+      "dtype": "float64"
+    },
+    "std": {
+      "shape": [
+        18
+      ],
+      "dtype": "float64"
+    }
+  },
+  "h5_summaries": {
+    "china-crop.h5": {
+      "total_keys": 4,
+      "keys_sample": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "sample_shapes": {
+        "lats": {
+          "shape": [
+            4397
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "lons": {
+          "shape": [
+            4397
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "x": {
+          "shape": [
+            4397,
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "y": {
+          "shape": [
+            4397
+          ],
+          "dtype": "int64",
+          "attrs": {}
+        }
+      }
+    },
+    "togo-eval.h5": {
+      "total_keys": 4,
+      "keys_sample": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "sample_shapes": {
+        "lats": {
+          "shape": [
+            306
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "lons": {
+          "shape": [
+            306
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "x": {
+          "shape": [
+            306,
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "y": {
+          "shape": [
+            306
+          ],
+          "dtype": "int64",
+          "attrs": {}
+        }
+      }
+    },
+    "Kenya_maize_2020_0_0.h5": {
+      "total_keys": 4,
+      "keys_sample": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "sample_shapes": {
+        "lats": {
+          "shape": [
+            7600
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "lons": {
+          "shape": [
+            7600
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "x": {
+          "shape": [
+            7600,
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "y": {
+          "shape": [
+            7600
+          ],
+          "dtype": "int64",
+          "attrs": {}
+        }
+      }
+    },
+    "normalizing_dict.h5": {
+      "total_keys": 2,
+      "keys_sample": [
+        "mean",
+        "std"
+      ],
+      "sample_shapes": {
+        "mean": {
+          "shape": [
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        },
+        "std": {
+          "shape": [
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        }
+      }
+    }
+  },
+  "array_samples": {
+    "0_brazil-non-crop.h5": {
+      "keys": [
+        "array"
+      ],
+      "shapes": {
+        "array": {
+          "shape": [
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        }
+      }
+    },
+    "0_canada.h5": {
+      "keys": [
+        "array"
+      ],
+      "shapes": {
+        "array": {
+          "shape": [
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        }
+      }
+    },
+    "0_china-crop.h5": {
+      "keys": [
+        "array"
+      ],
+      "shapes": {
+        "array": {
+          "shape": [
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        }
+      }
+    },
+    "0_croplands.h5": {
+      "keys": [
+        "array"
+      ],
+      "shapes": {
+        "array": {
+          "shape": [
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        }
+      }
+    },
+    "0_ethiopia.h5": {
+      "keys": [
+        "array"
+      ],
+      "shapes": {
+        "array": {
+          "shape": [
+            12,
+            18
+          ],
+          "dtype": "float64",
+          "attrs": {}
+        }
+      }
+    }
+  },
+  "labels_info": {
+    "total_features": 113893,
+    "sample_properties": {
+      "harvest_date": null,
+      "planting_date": null,
+      "label": null,
+      "classification_label": null,
+      "index": 0,
+      "is_crop": 1,
+      "lat": 10.712595966759284,
+      "lon": 37.083127746749796,
+      "dataset": "ethiopia",
+      "collection_date": "2020-10-22T00:00:00",
+      "export_end_date": "2021-02-01T00:00:00",
+      "externally_contributed_dataset": false,
+      "is_test": false
+    },
+    "sample_geometry_type": "Polygon",
+    "sample_first_1000_stats": {
+      "datasets": {
+        "ethiopia": 830,
+        "sudan": 170
+      },
+      "is_crop": {
+        "1": 624,
+        "0": 376
+      },
+      "crop_type": {
+        "unspecified": 1000
+      }
+    },
+    "sample_index_mappings": [
+      {
+        "index": 0,
+        "dataset": "ethiopia",
+        "expected_filename": "0_ethiopia.h5"
+      },
+      {
+        "index": 1,
+        "dataset": "ethiopia",
+        "expected_filename": "1_ethiopia.h5"
+      },
+      {
+        "index": 2,
+        "dataset": "ethiopia",
+        "expected_filename": "2_ethiopia.h5"
+      },
+      {
+        "index": 3,
+        "dataset": "ethiopia",
+        "expected_filename": "3_ethiopia.h5"
+      },
+      {
+        "index": 4,
+        "dataset": "ethiopia",
+        "expected_filename": "4_ethiopia.h5"
+      }
+    ]
+  }
+}

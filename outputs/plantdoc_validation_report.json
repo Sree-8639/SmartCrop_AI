@@ -1,0 +1,221 @@
+{
+  "dataset_name": "PlantDoc",
+  "dataset_path": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\plantdoc",
+  "status": "VALIDATED",
+  "total_raw_images": 2573,
+  "total_classes_discovered": 29,
+  "reliable_classes_count": 27,
+  "reliable_clean_images": 2549,
+  "corrupted_images_count": 0,
+  "exact_duplicates_count": 3,
+  "conflicting_label_duplicates_count": 9,
+  "underrepresented_classes": {
+    "Tomato two spotted spider mites leaf": 2,
+    "plantdoc": 1
+  },
+  "total_excluded_files": 24,
+  "split_summary": {
+    "train_count": 1783,
+    "train_pct": 69.95,
+    "val_count": 383,
+    "val_pct": 15.03,
+    "test_count": 383,
+    "test_pct": 15.03
+  },
+  "resolution_summary": {
+    "min_resolution": [
+      115,
+      69
+    ],
+    "max_resolution": [
+      6000,
+      6000
+    ],
+    "mean_resolution": [
+      1069,
+      911
+    ]
+  },
+  "raw_class_distribution": {
+    "plantdoc": {
+      "train": 0,
+      "test": 0,
+      "total": 1
+    },
+    "Apple leaf": {
+      "train": 82,
+      "test": 9,
+      "total": 91
+    },
+    "Apple rust leaf": {
+      "train": 78,
+      "test": 10,
+      "total": 88
+    },
+    "Apple Scab Leaf": {
+      "train": 83,
+      "test": 10,
+      "total": 93
+    },
+    "Bell_pepper leaf": {
+      "train": 53,
+      "test": 8,
+      "total": 61
+    },
+    "Bell_pepper leaf spot": {
+      "train": 62,
+      "test": 9,
+      "total": 71
+    },
+    "Blueberry leaf": {
+      "train": 104,
+      "test": 11,
+      "total": 115
+    },
+    "Cherry leaf": {
+      "train": 47,
+      "test": 10,
+      "total": 57
+    },
+    "Corn Gray leaf spot": {
+      "train": 64,
+      "test": 4,
+      "total": 68
+    },
+    "Corn leaf blight": {
+      "train": 179,
+      "test": 12,
+      "total": 191
+    },
+    "Corn rust leaf": {
+      "train": 106,
+      "test": 10,
+      "total": 116
+    },
+    "grape leaf": {
+      "train": 57,
+      "test": 12,
+      "total": 69
+    },
+    "grape leaf black rot": {
+      "train": 56,
+      "test": 8,
+      "total": 64
+    },
+    "Peach leaf": {
+      "train": 102,
+      "test": 9,
+      "total": 111
+    },
+    "Potato leaf early blight": {
+      "train": 108,
+      "test": 8,
+      "total": 116
+    },
+    "Potato leaf late blight": {
+      "train": 97,
+      "test": 8,
+      "total": 105
+    },
+    "Raspberry leaf": {
+      "train": 112,
+      "test": 7,
+      "total": 119
+    },
+    "Soyabean leaf": {
+      "train": 57,
+      "test": 8,
+      "total": 65
+    },
+    "Squash Powdery mildew leaf": {
+      "train": 124,
+      "test": 6,
+      "total": 130
+    },
+    "Strawberry leaf": {
+      "train": 88,
+      "test": 8,
+      "total": 96
+    },
+    "Tomato Early blight leaf": {
+      "train": 79,
+      "test": 9,
+      "total": 88
+    },
+    "Tomato leaf": {
+      "train": 55,
+      "test": 8,
+      "total": 63
+    },
+    "Tomato leaf bacterial spot": {
+      "train": 101,
+      "test": 9,
+      "total": 110
+    },
+    "Tomato leaf late blight": {
+      "train": 101,
+      "test": 10,
+      "total": 111
+    },
+    "Tomato leaf mosaic virus": {
+      "train": 44,
+      "test": 10,
+      "total": 54
+    },
+    "Tomato leaf yellow virus": {
+      "train": 70,
+      "test": 6,
+      "total": 76
+    },
+    "Tomato mold leaf": {
+      "train": 85,
+      "test": 6,
+      "total": 91
+    },
+    "Tomato Septoria leaf spot": {
+      "train": 140,
+      "test": 11,
+      "total": 151
+    },
+    "Tomato two spotted spider mites leaf": {
+      "train": 2,
+      "test": 0,
+      "total": 2
+    }
+  },
+  "clean_class_distribution": {
+    "Apple Scab Leaf": 93,
+    "Apple leaf": 91,
+    "Apple rust leaf": 88,
+    "Bell_pepper leaf": 61,
+    "Bell_pepper leaf spot": 71,
+    "Blueberry leaf": 114,
+    "Cherry leaf": 57,
+    "Corn Gray leaf spot": 65,
+    "Corn leaf blight": 188,
+    "Corn rust leaf": 116,
+    "Peach leaf": 111,
+    "Potato leaf early blight": 111,
+    "Potato leaf late blight": 100,
+    "Raspberry leaf": 119,
+    "Soyabean leaf": 65,
+    "Squash Powdery mildew leaf": 130,
+    "Strawberry leaf": 96,
+    "Tomato Early blight leaf": 88,
+    "Tomato Septoria leaf spot": 149,
+    "Tomato leaf": 63,
+    "Tomato leaf bacterial spot": 109,
+    "Tomato leaf late blight": 111,
+    "Tomato leaf mosaic virus": 54,
+    "Tomato leaf yellow virus": 75,
+    "Tomato mold leaf": 91,
+    "grape leaf": 69,
+    "grape leaf black rot": 64
+  },
+  "split_manifest_saved": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\outputs\\plantdoc_split_manifest.json",
+  "warnings": [
+    "Underrepresented class 'Tomato two spotted spider mites leaf' had only 2 sample(s) (< 5) and was excluded from 3-way split.",
+    "Underrepresented class 'plantdoc' had only 1 sample(s) (< 5) and was excluded from 3-way split.",
+    "Found 9 conflicting-label duplicate images across upstream train and test partitions; excluded to prevent corrupted ground-truth."
+  ]
+}

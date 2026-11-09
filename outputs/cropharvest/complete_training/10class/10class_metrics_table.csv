@@ -1,0 +1,9 @@
+,Training,Validation,Official Test
+Accuracy,93.36,74.20,67.29
+Precision (macro),94.07,71.21,45.37
+Recall (macro),93.94,65.21,32.67
+F1 (macro),93.96,67.27,32.39
+Precision (weighted),93.42,73.86,72.65
+Recall (weighted),93.36,74.20,67.29
+F1 (weighted),93.33,73.55,60.08
+

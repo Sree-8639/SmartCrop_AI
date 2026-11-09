@@ -1,0 +1,405 @@
+{
+  "timestamp": "2026-11-08 16:11:37",
+  "dataset_dir": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\cropharvest",
+  "root_files": {
+    "Brazil_coffee_2020_0_0.h5": {
+      "size_mb": 1139.29,
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "dataset_lats": {
+        "shape": [
+          681863
+        ],
+        "dtype": "float64"
+      },
+      "dataset_lons": {
+        "shape": [
+          681863
+        ],
+        "dtype": "float64"
+      },
+      "dataset_x": {
+        "shape": [
+          681863,
+          12,
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_y": {
+        "shape": [
+          681863
+        ],
+        "dtype": "int64"
+      }
+    },
+    "Brazil_coffee_2021_0_0.h5": {
+      "size_mb": 1139.29,
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "dataset_lats": {
+        "shape": [
+          681863
+        ],
+        "dtype": "float64"
+      },
+      "dataset_lons": {
+        "shape": [
+          681863
+        ],
+        "dtype": "float64"
+      },
+      "dataset_x": {
+        "shape": [
+          681863,
+          12,
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_y": {
+        "shape": [
+          681863
+        ],
+        "dtype": "int64"
+      }
+    },
+    "china-crop.h5": {
+      "size_mb": 7.35,
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "dataset_lats": {
+        "shape": [
+          4397
+        ],
+        "dtype": "float64"
+      },
+      "dataset_lons": {
+        "shape": [
+          4397
+        ],
+        "dtype": "float64"
+      },
+      "dataset_x": {
+        "shape": [
+          4397,
+          12,
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_y": {
+        "shape": [
+          4397
+        ],
+        "dtype": "int64"
+      }
+    },
+    "Kenya_maize_2020_0_0.h5": {
+      "size_mb": 12.7,
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "dataset_lats": {
+        "shape": [
+          7600
+        ],
+        "dtype": "float64"
+      },
+      "dataset_lons": {
+        "shape": [
+          7600
+        ],
+        "dtype": "float64"
+      },
+      "dataset_x": {
+        "shape": [
+          7600,
+          12,
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_y": {
+        "shape": [
+          7600
+        ],
+        "dtype": "int64"
+      }
+    },
+    "Kenya_maize_2020_1_0.h5": {
+      "size_mb": 13.17,
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "dataset_lats": {
+        "shape": [
+          7878
+        ],
+        "dtype": "float64"
+      },
+      "dataset_lons": {
+        "shape": [
+          7878
+        ],
+        "dtype": "float64"
+      },
+      "dataset_x": {
+        "shape": [
+          7878,
+          12,
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_y": {
+        "shape": [
+          7878
+        ],
+        "dtype": "int64"
+      }
+    },
+    "normalizing_dict.h5": {
+      "size_mb": 0.0,
+      "keys": [
+        "mean",
+        "std"
+      ],
+      "dataset_mean": {
+        "shape": [
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_std": {
+        "shape": [
+          18
+        ],
+        "dtype": "float64"
+      }
+    },
+    "togo-eval.h5": {
+      "size_mb": 0.52,
+      "keys": [
+        "lats",
+        "lons",
+        "x",
+        "y"
+      ],
+      "dataset_lats": {
+        "shape": [
+          306
+        ],
+        "dtype": "float64"
+      },
+      "dataset_lons": {
+        "shape": [
+          306
+        ],
+        "dtype": "float64"
+      },
+      "dataset_x": {
+        "shape": [
+          306,
+          12,
+          18
+        ],
+        "dtype": "float64"
+      },
+      "dataset_y": {
+        "shape": [
+          306
+        ],
+        "dtype": "int64"
+      }
+    }
+  },
+  "arrays_audit": {
+    "total_files": 87464,
+    "sample_checked": 1500,
+    "observed_shapes": [
+      [
+        12,
+        18
+      ]
+    ],
+    "observed_dtypes": [
+      "float64"
+    ],
+    "files_with_nans": 0,
+    "files_with_infs": 0,
+    "corrupt_files": 0,
+    "attributes": [
+      "is_crop",
+      "dataset",
+      "label",
+      "instance_lon",
+      "instance_lat",
+      "label_lon",
+      "label_lat"
+    ]
+  },
+  "geojson_audit": {
+    "total_features_in_geojson": 113893,
+    "matched_features_with_arrays": 87464,
+    "missing_from_arrays": 26429,
+    "binary_crop_counts": {
+      "1": 60521,
+      "0": 26943
+    },
+    "official_is_test_counts": {
+      "false": 82654,
+      "true": 4810
+    },
+    "datasets_represented": 27,
+    "dataset_distribution": {
+      "geowiki-landcover-2017": 24761,
+      "jecam": 12856,
+      "canada": 7160,
+      "ile-de-france": 6184,
+      "central-asia": 4894,
+      "croplands": 4519,
+      "china-crop": 4397,
+      "rwanda-ceo": 3591,
+      "kenya-non-crop": 2686,
+      "germany": 2550,
+      "reunion-france": 2238,
+      "tanzania-ceo": 2209,
+      "martinique-france": 2129,
+      "mali-helmets-labelling-crops": 1506,
+      "togo": 1272
+    },
+    "classification_labels": {
+      "None": 44861,
+      "cereals": 13259,
+      "other": 8406,
+      "non_crop": 5533,
+      "fruits_nuts": 4110,
+      "vegetables_melons": 3755,
+      "oilseeds": 2868,
+      "leguminous": 1837,
+      "root_tuber": 1179,
+      "beverage_spice": 908,
+      "sugar": 748
+    },
+    "top_crop_types": {
+      "cotton": 3647,
+      "maize": 3022,
+      "rice": 2729,
+      "wheat": 1883,
+      "millet": 1259,
+      "meadows": 961,
+      "groundnut": 938,
+      "sorghum": 799,
+      "soybean": 728,
+      "carrot": 553,
+      "fallow": 495,
+      "eggplant": 449,
+      "potato": 375,
+      "sugarcane": 359,
+      "pine": 356
+    },
+    "bounding_box": {
+      "lat_min": -52.75,
+      "lat_max": 59.45238095,
+      "lon_min": -162.047619,
+      "lon_max": 178.25
+    }
+  },
+  "split_counts": {},
+  "evaluation_testbeds": {
+    "togo": {
+      "samples": 306,
+      "crop_samples": 106,
+      "non_crop_samples": 200,
+      "x_shape": [
+        306,
+        12,
+        18
+      ],
+      "role": "Official held-out zero-shot/few-shot regional evaluation testbed (Togo, West Africa)"
+    },
+    "china": {
+      "samples": 4397,
+      "crop_samples": 2358,
+      "non_crop_samples": 2039,
+      "x_shape": [
+        4397,
+        12,
+        18
+      ],
+      "role": "Official held-out regional transfer evaluation testbed (China)"
+    }
+  },
+  "data_integrity": {},
+  "normalizing_dict": {
+    "mean_shape": [
+      18
+    ],
+    "std_shape": [
+      18
+    ],
+    "mean_min": -18.737524460893283,
+    "mean_max": 3200.2996027800878,
+    "std_min": 0.0033269562766611444,
+    "std_max": 1476.6850103027462,
+    "mean_values": [
+      -11.402222508898584,
+      -18.737524460893283,
+      1648.2152191941907,
+      1573.4610874943905,
+      1615.5489068522484,
+      1858.2716898520655,
+      2601.3555762760366,
+      2965.1262098261586,
+      2848.7703773525336,
+      3200.2996027800878,
+      988.3951744805588,
+      2388.875987761158,
+      1603.9434589134196,
+      291.10068757630137,
+      0.002899168594319935,
+      623.3725288552483,
+      4.772892120134574,
+      0.3286759541524565
+    ],
+    "std_values": [
+      3.9990006137706025,
+      4.746129503502093,
+      1381.082565250503,
+      1291.5253102557383,
+      1476.6850103027462,
+      1422.7793815055568,
+      1343.5806285212616,
+      1396.6833646173918,
+      1336.0620748659192,
+      1406.3412200105693,
+      834.5202295842477,
+      1099.279298427952,
+      947.4737894434511,
+      9.808570091118522,
+      0.0033269562766611444,
+      655.0334629731693,
+      6.18644770735272,
+      0.17878359339732122
+    ]
+  }
+}

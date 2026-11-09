@@ -1,0 +1,18 @@
+# SmartCrop AI - Kaggle Notebook Training Requirements
+# Note: Kaggle already provides pre-installed PyTorch with CUDA support.
+
+# Computer Vision & Detection
+ultralytics>=8.2.0
+albumentations>=1.4.0
+timm>=0.9.16
+
+# Satellite & Geospatial Processing
+rasterio>=1.3.9
+geopandas>=0.14.0
+
+# Model Analysis & Visualization
+seaborn>=0.13.0
+plotly>=5.20.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+

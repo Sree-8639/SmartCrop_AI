@@ -1,0 +1,101 @@
+{
+  "target_objective": {
+    "metric": "validation_top1_accuracy",
+    "target_threshold": 0.80,
+    "status": "PENDING_APPROVAL_PRIOR_TO_TRAINING",
+    "target_reached": false
+  },
+  "dataset_metadata": {
+    "dataset": "IP102 Insect Pest Recognition Benchmark",
+    "total_classes": 102,
+    "benchmark_reference": "Wu et al., CVPR 2019",
+    "evaluation_split": "official_validation_set",
+    "held_out_test_set_touched": false
+  },
+  "experiments": {
+    "baseline": {
+      "name": "Stage 0: Pretrained EfficientNet-B0 Baseline",
+      "architecture": "EfficientNet-B0",
+      "resolution": [224, 224],
+      "loss": "Weighted Cross-Entropy",
+      "optimizer": "AdamW",
+      "lr": 0.0003,
+      "scheduler": "CosineAnnealingLR",
+      "metrics": {
+        "val_top1_accuracy": null,
+        "val_top5_accuracy": null,
+        "val_macro_f1": null,
+        "val_weighted_f1": null
+      },
+      "execution_time_seconds": null,
+      "checkpoint_path": "outputs/ip102/ip102_baseline.pth",
+      "status": "PENDING"
+    },
+    "experiment_A": {
+      "name": "Experiment A: Two-Stage Differential Fine-Tuning",
+      "architecture": "EfficientNet-B0",
+      "resolution": [224, 224],
+      "loss": "Weighted Cross-Entropy",
+      "optimizer": "AdamW",
+      "lr_backbone": 0.00002,
+      "lr_head": 0.0002,
+      "scheduler": "CosineAnnealingLR",
+      "metrics": {
+        "val_top1_accuracy": null,
+        "val_top5_accuracy": null,
+        "val_macro_f1": null,
+        "val_weighted_f1": null
+      },
+      "execution_time_seconds": null,
+      "checkpoint_path": "outputs/ip102/ip102_exp_A.pth",
+      "status": "PENDING"
+    },
+    "experiment_B": {
+      "name": "Experiment B: Class-Balanced Focal Loss + Label Smoothing",
+      "architecture": "EfficientNet-B0",
+      "resolution": [224, 224],
+      "loss": "Class-Balanced Focal Loss (gamma=1.5, beta=0.9999, eps=0.1)",
+      "optimizer": "AdamW",
+      "scheduler": "CosineAnnealingLR",
+      "metrics": {
+        "val_top1_accuracy": null,
+        "val_top5_accuracy": null,
+        "val_macro_f1": null,
+        "val_weighted_f1": null
+      },
+      "execution_time_seconds": null,
+      "checkpoint_path": "outputs/ip102/ip102_exp_B.pth",
+      "status": "PENDING"
+    },
+    "experiment_C": {
+      "name": "Experiment C: ConvNeXt-Tiny + Higher Resolution (288x288)",
+      "architecture": "ConvNeXt-Tiny",
+      "resolution": [288, 288],
+      "loss": "Class-Balanced Focal Loss + Label Smoothing",
+      "optimizer": "AdamW",
+      "scheduler": "CosineAnnealingLR",
+      "metrics": {
+        "val_top1_accuracy": null,
+        "val_top5_accuracy": null,
+        "val_macro_f1": null,
+        "val_weighted_f1": null
+      },
+      "execution_time_seconds": null,
+      "checkpoint_path": "outputs/ip102/ip102_exp_C.pth",
+      "status": "PENDING"
+    },
+    "experiment_D": {
+      "name": "Experiment D: Test-Time Augmentation (TTA)",
+      "architecture": "Best Model from Exp A-C",
+      "resolution": [288, 288],
+      "inference_mode": "5-Crop Multi-Scale TTA",
+      "metrics": {
+        "ordinary_val_top1_accuracy": null,
+        "tta_val_top1_accuracy": null,
+        "tta_accuracy_gain": null
+      },
+      "status": "PENDING"
+    }
+  }
+}
+

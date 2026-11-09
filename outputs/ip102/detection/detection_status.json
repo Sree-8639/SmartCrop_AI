@@ -1,0 +1,13 @@
+{
+  "status": "ARCHIVES_PRESENT_PENDING_EXTRACTION",
+  "discovery_meta": {
+    "status": "ARCHIVES_PRESENT_PENDING_EXTRACTION",
+    "voc_root": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102\\Detection\\VOC2007",
+    "annot_tar": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102\\Detection\\VOC2007\\Annotations.tar",
+    "jpeg_tar": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102\\Detection\\VOC2007\\JPEGImages.tar",
+    "required_space_mb": 782.46
+  },
+  "classes_detected": 102,
+  "instructions": "Annotations.tar and JPEGImages.tar detected. Pass --auto-extract-tar to unpack the archives (~782.5 MB disk space needed) or extract them into datasets/ip102/Detection/VOC2007/.",
+  "training_executed": false
+}

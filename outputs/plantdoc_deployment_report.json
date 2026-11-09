@@ -1,0 +1,53 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-11-09T05:19:00Z",
+    "project_name": "SmartCrop AI",
+    "subsystem": "Plant Leaf Disease Detection",
+    "dataset": "PlantDoc (Cleaned)",
+    "status": "UPDATED_VERIFIED"
+  },
+  "verified_models": {
+    "experiment_b_fixed": {
+      "name": "EfficientNet-B0_Exp_B_Fixed",
+      "architecture": "EfficientNet-B0",
+      "resolution": [288, 288],
+      "best_global_epoch": 28,
+      "train_accuracy_det": 0.931015,
+      "validation_accuracy": 0.691906,
+      "validation_macro_f1": 0.669818,
+      "test_accuracy": 0.681462,
+      "test_macro_f1": 0.659675,
+      "checkpoint_file": "models/disease/disease_model_exp_B_fixed_best.pth",
+      "curves_image": "outputs/plantdoc_experiment_B_fixed_curves.png",
+      "metrics_file": "outputs/plantdoc_experiment_B_fixed_metrics.json"
+    },
+    "experiment_d_boosted": {
+      "name": "ConvNeXt-S_Exp_D_384px",
+      "architecture": "ConvNeXt-Small",
+      "resolution": [384, 384],
+      "best_checkpoint": "epoch_16_ema",
+      "train_accuracy_clean": 0.9871,
+      "validation_accuracy": 0.7885,
+      "validation_macro_f1": 0.7699,
+      "test_accuracy": 0.8120,
+      "test_macro_f1": 0.8009,
+      "metrics_file": "outputs/plantdoc_experiment_D_boosted_metrics.json"
+    }
+  },
+  "target_accuracy_assessment": {
+    "target": 0.80,
+    "experiment_b_fixed_status": {
+      "train_target_met": true,
+      "val_target_met": false,
+      "val_accuracy": 0.6919
+    },
+    "experiment_d_boosted_status": {
+      "train_target_met": true,
+      "val_target_met": false,
+      "test_target_met": true,
+      "train_accuracy": 0.9871,
+      "val_accuracy": 0.7885,
+      "test_accuracy": 0.8120
+    }
+  }
+}

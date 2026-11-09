@@ -1,0 +1,36 @@
+{
+  "checkpoint_epoch": 13,
+  "tta": true,
+  "metrics": {
+    "Training (10k clean subset)": {
+      "accuracy": 0.9211,
+      "top5_accuracy": 0.998199999332428,
+      "macro_precision": 0.9069254408769457,
+      "macro_recall": 0.8972293954238675,
+      "macro_f1": 0.9002324573546808,
+      "weighted_precision": 0.9217328172530531,
+      "weighted_recall": 0.9211,
+      "weighted_f1": 0.9203255882268293
+    },
+    "Validation": {
+      "accuracy": 0.7733084709643048,
+      "top5_accuracy": 0.945258378982544,
+      "macro_precision": 0.7182574749082764,
+      "macro_recall": 0.6895302181377486,
+      "macro_f1": 0.6981943248620399,
+      "weighted_precision": 0.7686546738074751,
+      "weighted_recall": 0.7733084709643048,
+      "weighted_f1": 0.7684954350041686
+    },
+    "Test (held-out)": {
+      "accuracy": 0.7689110924444051,
+      "top5_accuracy": 0.9436314702033997,
+      "macro_precision": 0.7106436467035173,
+      "macro_recall": 0.6878627764002526,
+      "macro_f1": 0.6954584981614709,
+      "weighted_precision": 0.7639285369014441,
+      "weighted_recall": 0.7689110924444051,
+      "weighted_f1": 0.7646964337342348
+    }
+  }
+}

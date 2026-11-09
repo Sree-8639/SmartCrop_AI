@@ -1,0 +1,716 @@
+[
+  {
+    "class": "rice leaf roller",
+    "precision": 0.75,
+    "recall": 0.8648648648648649,
+    "f1": 0.803347280334728,
+    "val_images": 111
+  },
+  {
+    "class": "rice leaf caterpillar",
+    "precision": 0.5757575757575758,
+    "recall": 0.3958333333333333,
+    "f1": 0.4691358024691358,
+    "val_images": 48
+  },
+  {
+    "class": "paddy stem maggot",
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1": 0.5,
+    "val_images": 26
+  },
+  {
+    "class": "asiatic rice borer",
+    "precision": 0.6635514018691588,
+    "recall": 0.6698113207547169,
+    "f1": 0.6666666666666666,
+    "val_images": 106
+  },
+  {
+    "class": "yellow rice borer",
+    "precision": 0.7346938775510204,
+    "recall": 0.72,
+    "f1": 0.7272727272727273,
+    "val_images": 50
+  },
+  {
+    "class": "rice gall midge",
+    "precision": 0.8431372549019608,
+    "recall": 0.8431372549019608,
+    "f1": 0.8431372549019608,
+    "val_images": 51
+  },
+  {
+    "class": "Rice Stemfly",
+    "precision": 0.5384615384615384,
+    "recall": 0.5675675675675675,
+    "f1": 0.5526315789473685,
+    "val_images": 37
+  },
+  {
+    "class": "brown plant hopper",
+    "precision": 0.4888888888888889,
+    "recall": 0.5301204819277109,
+    "f1": 0.5086705202312138,
+    "val_images": 83
+  },
+  {
+    "class": "white backed plant hopper",
+    "precision": 0.5925925925925926,
+    "recall": 0.5333333333333333,
+    "f1": 0.5614035087719298,
+    "val_images": 90
+  },
+  {
+    "class": "small brown plant hopper",
+    "precision": 0.4901960784313725,
+    "recall": 0.4464285714285714,
+    "f1": 0.4672897196261682,
+    "val_images": 56
+  },
+  {
+    "class": "rice water weevil",
+    "precision": 0.7888888888888889,
+    "recall": 0.8255813953488372,
+    "f1": 0.8068181818181818,
+    "val_images": 86
+  },
+  {
+    "class": "rice leafhopper",
+    "precision": 0.675,
+    "recall": 0.675,
+    "f1": 0.675,
+    "val_images": 40
+  },
+  {
+    "class": "grain spreader thrips",
+    "precision": 0.6111111111111112,
+    "recall": 0.6111111111111112,
+    "f1": 0.6111111111111112,
+    "val_images": 18
+  },
+  {
+    "class": "rice shell pest",
+    "precision": 0.5714285714285714,
+    "recall": 0.4878048780487805,
+    "f1": 0.5263157894736842,
+    "val_images": 41
+  },
+  {
+    "class": "grub",
+    "precision": 0.8850574712643678,
+    "recall": 0.8953488372093024,
+    "f1": 0.8901734104046243,
+    "val_images": 86
+  },
+  {
+    "class": "mole cricket",
+    "precision": 0.9705882352941176,
+    "recall": 1.0,
+    "f1": 0.9850746268656716,
+    "val_images": 165
+  },
+  {
+    "class": "wireworm",
+    "precision": 0.8817204301075269,
+    "recall": 0.9318181818181818,
+    "f1": 0.9060773480662984,
+    "val_images": 88
+  },
+  {
+    "class": "white margined moth",
+    "precision": 0.3333333333333333,
+    "recall": 0.3571428571428571,
+    "f1": 0.3448275862068966,
+    "val_images": 14
+  },
+  {
+    "class": "black cutworm",
+    "precision": 0.5263157894736842,
+    "recall": 0.7058823529411765,
+    "f1": 0.6030150753768844,
+    "val_images": 85
+  },
+  {
+    "class": "large cutworm",
+    "precision": 0.3157894736842105,
+    "recall": 0.2448979591836734,
+    "f1": 0.2758620689655172,
+    "val_images": 49
+  },
+  {
+    "class": "yellow cutworm",
+    "precision": 0.4473684210526316,
+    "recall": 0.3541666666666667,
+    "f1": 0.3953488372093023,
+    "val_images": 48
+  },
+  {
+    "class": "red spider",
+    "precision": 0.6,
+    "recall": 0.6226415094339622,
+    "f1": 0.6111111111111112,
+    "val_images": 53
+  },
+  {
+    "class": "corn borer",
+    "precision": 0.7528089887640449,
+    "recall": 0.788235294117647,
+    "f1": 0.7701149425287356,
+    "val_images": 170
+  },
+  {
+    "class": "army worm",
+    "precision": 0.6612903225806451,
+    "recall": 0.7663551401869159,
+    "f1": 0.70995670995671,
+    "val_images": 107
+  },
+  {
+    "class": "aphids",
+    "precision": 0.7828810020876826,
+    "recall": 0.9168704156479216,
+    "f1": 0.8445945945945946,
+    "val_images": 409
+  },
+  {
+    "class": "Potosiabre vitarsis",
+    "precision": 0.9423076923076924,
+    "recall": 0.875,
+    "f1": 0.9074074074074074,
+    "val_images": 56
+  },
+  {
+    "class": "peach borer",
+    "precision": 0.7605633802816901,
+    "recall": 0.782608695652174,
+    "f1": 0.7714285714285715,
+    "val_images": 69
+  },
+  {
+    "class": "english grain aphid",
+    "precision": 0.5,
+    "recall": 0.3692307692307692,
+    "f1": 0.4247787610619469,
+    "val_images": 65
+  },
+  {
+    "class": "green bug",
+    "precision": 0.2580645161290322,
+    "recall": 0.25,
+    "f1": 0.2539682539682539,
+    "val_images": 32
+  },
+  {
+    "class": "bird cherry-oataphid",
+    "precision": 0.4347826086956521,
+    "recall": 0.2816901408450704,
+    "f1": 0.3418803418803419,
+    "val_images": 71
+  },
+  {
+    "class": "wheat blossom midge",
+    "precision": 0.9361702127659576,
+    "recall": 0.9166666666666666,
+    "f1": 0.9263157894736842,
+    "val_images": 48
+  },
+  {
+    "class": "penthaleus major",
+    "precision": 0.7894736842105263,
+    "recall": 0.625,
+    "f1": 0.6976744186046512,
+    "val_images": 24
+  },
+  {
+    "class": "longlegged spider mite",
+    "precision": 0.6818181818181818,
+    "recall": 0.625,
+    "f1": 0.6521739130434783,
+    "val_images": 24
+  },
+  {
+    "class": "wheat phloeothrips",
+    "precision": 0.5384615384615384,
+    "recall": 0.4827586206896552,
+    "f1": 0.509090909090909,
+    "val_images": 29
+  },
+  {
+    "class": "wheat sawfly",
+    "precision": 0.9117647058823528,
+    "recall": 0.9117647058823528,
+    "f1": 0.9117647058823528,
+    "val_images": 34
+  },
+  {
+    "class": "cerodonta denticornis",
+    "precision": 0.625,
+    "recall": 0.3846153846153846,
+    "f1": 0.4761904761904761,
+    "val_images": 13
+  },
+  {
+    "class": "beet fly",
+    "precision": 0.3636363636363636,
+    "recall": 0.4,
+    "f1": 0.3809523809523809,
+    "val_images": 10
+  },
+  {
+    "class": "flea beetle",
+    "precision": 0.9036144578313252,
+    "recall": 0.9493670886075948,
+    "f1": 0.925925925925926,
+    "val_images": 79
+  },
+  {
+    "class": "cabbage army worm",
+    "precision": 0.5285714285714286,
+    "recall": 0.4352941176470588,
+    "f1": 0.4774193548387097,
+    "val_images": 85
+  },
+  {
+    "class": "beet army worm",
+    "precision": 0.6413793103448275,
+    "recall": 0.58125,
+    "f1": 0.6098360655737705,
+    "val_images": 160
+  },
+  {
+    "class": "Beet spot flies",
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1": 0.6666666666666666,
+    "val_images": 30
+  },
+  {
+    "class": "meadow moth",
+    "precision": 0.7931034482758621,
+    "recall": 0.8518518518518519,
+    "f1": 0.8214285714285714,
+    "val_images": 27
+  },
+  {
+    "class": "beet weevil",
+    "precision": 0.6578947368421053,
+    "recall": 0.8064516129032258,
+    "f1": 0.7246376811594203,
+    "val_images": 31
+  },
+  {
+    "class": "sericaorient alismots chulsky",
+    "precision": 0.7777777777777778,
+    "recall": 0.7368421052631579,
+    "f1": 0.7567567567567568,
+    "val_images": 19
+  },
+  {
+    "class": "alfalfa weevil",
+    "precision": 0.78,
+    "recall": 0.75,
+    "f1": 0.7647058823529411,
+    "val_images": 52
+  },
+  {
+    "class": "flax budworm",
+    "precision": 0.5164835164835165,
+    "recall": 0.4392523364485981,
+    "f1": 0.4747474747474747,
+    "val_images": 107
+  },
+  {
+    "class": "alfalfa plant bug",
+    "precision": 0.5254237288135594,
+    "recall": 0.4696969696969697,
+    "f1": 0.496,
+    "val_images": 66
+  },
+  {
+    "class": "tarnished plant bug",
+    "precision": 0.6375,
+    "recall": 0.6219512195121951,
+    "f1": 0.6296296296296297,
+    "val_images": 82
+  },
+  {
+    "class": "Locustoidea",
+    "precision": 0.9849624060150376,
+    "recall": 0.9424460431654677,
+    "f1": 0.9632352941176472,
+    "val_images": 139
+  },
+  {
+    "class": "lytta polita",
+    "precision": 0.7017543859649122,
+    "recall": 0.6153846153846154,
+    "f1": 0.6557377049180327,
+    "val_images": 65
+  },
+  {
+    "class": "legume blister beetle",
+    "precision": 0.7517241379310344,
+    "recall": 0.7730496453900709,
+    "f1": 0.7622377622377622,
+    "val_images": 141
+  },
+  {
+    "class": "blister beetle",
+    "precision": 0.7634408602150538,
+    "recall": 0.7513227513227513,
+    "f1": 0.7573333333333333,
+    "val_images": 189
+  },
+  {
+    "class": "therioaphis maculata Buckton",
+    "precision": 0.5,
+    "recall": 0.1923076923076923,
+    "f1": 0.2777777777777778,
+    "val_images": 26
+  },
+  {
+    "class": "odontothrips loti",
+    "precision": 0.6875,
+    "recall": 0.6470588235294118,
+    "f1": 0.6666666666666666,
+    "val_images": 17
+  },
+  {
+    "class": "Thrips",
+    "precision": 0.4939759036144578,
+    "recall": 0.4659090909090909,
+    "f1": 0.47953216374269,
+    "val_images": 88
+  },
+  {
+    "class": "alfalfa seed chalcid",
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "f1": 0.7272727272727273,
+    "val_images": 18
+  },
+  {
+    "class": "Pieris canidia",
+    "precision": 0.9591836734693876,
+    "recall": 1.0,
+    "f1": 0.9791666666666666,
+    "val_images": 47
+  },
+  {
+    "class": "Apolygus lucorum",
+    "precision": 0.5555555555555556,
+    "recall": 0.3947368421052631,
+    "f1": 0.4615384615384615,
+    "val_images": 38
+  },
+  {
+    "class": "Limacodidae",
+    "precision": 0.9703703703703704,
+    "recall": 0.9424460431654677,
+    "f1": 0.9562043795620438,
+    "val_images": 139
+  },
+  {
+    "class": "Viteus vitifoliae",
+    "precision": 0.7894736842105263,
+    "recall": 0.8571428571428571,
+    "f1": 0.821917808219178,
+    "val_images": 35
+  },
+  {
+    "class": "Colomerus vitis",
+    "precision": 0.7692307692307693,
+    "recall": 0.5555555555555556,
+    "f1": 0.6451612903225806,
+    "val_images": 18
+  },
+  {
+    "class": "Brevipoalpus lewisi McGregor",
+    "precision": 0.8333333333333334,
+    "recall": 0.625,
+    "f1": 0.7142857142857143,
+    "val_images": 8
+  },
+  {
+    "class": "oides decempunctata",
+    "precision": 0.9642857142857144,
+    "recall": 0.9310344827586208,
+    "f1": 0.9473684210526316,
+    "val_images": 29
+  },
+  {
+    "class": "Polyphagotars onemus latus",
+    "precision": 0.5,
+    "recall": 0.125,
+    "f1": 0.2,
+    "val_images": 8
+  },
+  {
+    "class": "Pseudococcus comstocki Kuwana",
+    "precision": 0.7878787878787878,
+    "recall": 0.8666666666666667,
+    "f1": 0.8253968253968254,
+    "val_images": 30
+  },
+  {
+    "class": "parathrene regalis",
+    "precision": 0.8461538461538461,
+    "recall": 0.7857142857142857,
+    "f1": 0.8148148148148148,
+    "val_images": 14
+  },
+  {
+    "class": "Ampelophaga",
+    "precision": 0.8170731707317073,
+    "recall": 0.881578947368421,
+    "f1": 0.8481012658227848,
+    "val_images": 76
+  },
+  {
+    "class": "Lycorma delicatula",
+    "precision": 0.9075471698113208,
+    "recall": 0.9075471698113208,
+    "f1": 0.9075471698113208,
+    "val_images": 530
+  },
+  {
+    "class": "Xylotrechus",
+    "precision": 0.9230769230769232,
+    "recall": 0.8347826086956521,
+    "f1": 0.8767123287671232,
+    "val_images": 115
+  },
+  {
+    "class": "Cicadella viridis",
+    "precision": 0.7898550724637681,
+    "recall": 0.8515625,
+    "f1": 0.8195488721804511,
+    "val_images": 128
+  },
+  {
+    "class": "Miridae",
+    "precision": 0.875717017208413,
+    "recall": 0.9015748031496064,
+    "f1": 0.8884578079534433,
+    "val_images": 508
+  },
+  {
+    "class": "Trialeurodes vaporariorum",
+    "precision": 0.8285714285714286,
+    "recall": 0.8405797101449275,
+    "f1": 0.8345323741007195,
+    "val_images": 69
+  },
+  {
+    "class": "Erythroneura apicalis",
+    "precision": 0.8333333333333334,
+    "recall": 0.7142857142857143,
+    "f1": 0.7692307692307693,
+    "val_images": 7
+  },
+  {
+    "class": "Papilio xuthus",
+    "precision": 0.9772727272727272,
+    "recall": 0.9555555555555556,
+    "f1": 0.9662921348314608,
+    "val_images": 45
+  },
+  {
+    "class": "Panonchus citri McGregor",
+    "precision": 0.6170212765957447,
+    "recall": 0.7631578947368421,
+    "f1": 0.6823529411764706,
+    "val_images": 38
+  },
+  {
+    "class": "Phyllocoptes oleiverus ashmead",
+    "precision": 0.9411764705882352,
+    "recall": 0.9411764705882352,
+    "f1": 0.9411764705882352,
+    "val_images": 17
+  },
+  {
+    "class": "Icerya purchasi Maskell",
+    "precision": 0.8354430379746836,
+    "recall": 0.9166666666666666,
+    "f1": 0.8741721854304636,
+    "val_images": 72
+  },
+  {
+    "class": "Unaspis yanonensis",
+    "precision": 0.9166666666666666,
+    "recall": 0.7857142857142857,
+    "f1": 0.8461538461538461,
+    "val_images": 42
+  },
+  {
+    "class": "Ceroplastes rubens",
+    "precision": 0.9615384615384616,
+    "recall": 0.9615384615384616,
+    "f1": 0.9615384615384616,
+    "val_images": 26
+  },
+  {
+    "class": "Chrysomphalus aonidum",
+    "precision": 0.782608695652174,
+    "recall": 0.8181818181818182,
+    "f1": 0.8,
+    "val_images": 22
+  },
+  {
+    "class": "Parlatoria zizyphus Lucus",
+    "precision": 0.6666666666666666,
+    "recall": 0.5714285714285714,
+    "f1": 0.6153846153846154,
+    "val_images": 7
+  },
+  {
+    "class": "Nipaecoccus vastalor",
+    "precision": 0.75,
+    "recall": 0.3,
+    "f1": 0.4285714285714285,
+    "val_images": 10
+  },
+  {
+    "class": "Aleurocanthus spiniferus",
+    "precision": 0.875,
+    "recall": 0.9264705882352942,
+    "f1": 0.9,
+    "val_images": 68
+  },
+  {
+    "class": "Tetradacus c Bactrocera minax",
+    "precision": 0.7948717948717948,
+    "recall": 0.7948717948717948,
+    "f1": 0.7948717948717948,
+    "val_images": 39
+  },
+  {
+    "class": "Dacus dorsalis(Hendel)",
+    "precision": 0.6727272727272727,
+    "recall": 0.8409090909090909,
+    "f1": 0.7474747474747475,
+    "val_images": 44
+  },
+  {
+    "class": "Bactrocera tsuneonis",
+    "precision": 0.5833333333333334,
+    "recall": 0.4117647058823529,
+    "f1": 0.4827586206896552,
+    "val_images": 17
+  },
+  {
+    "class": "Prodenia litura",
+    "precision": 0.6081081081081081,
+    "recall": 0.6923076923076923,
+    "f1": 0.6474820143884892,
+    "val_images": 130
+  },
+  {
+    "class": "Adristyrannus",
+    "precision": 0.8928571428571429,
+    "recall": 0.8064516129032258,
+    "f1": 0.847457627118644,
+    "val_images": 31
+  },
+  {
+    "class": "Phyllocnistis citrella Stainton",
+    "precision": 0.8409090909090909,
+    "recall": 0.925,
+    "f1": 0.8809523809523809,
+    "val_images": 40
+  },
+  {
+    "class": "Toxoptera citricidus",
+    "precision": 0.6875,
+    "recall": 0.5789473684210527,
+    "f1": 0.6285714285714286,
+    "val_images": 19
+  },
+  {
+    "class": "Toxoptera aurantii",
+    "precision": 0.65,
+    "recall": 0.5652173913043478,
+    "f1": 0.6046511627906976,
+    "val_images": 23
+  },
+  {
+    "class": "Aphis citricola Vander Goot",
+    "precision": 0.71875,
+    "recall": 0.6571428571428571,
+    "f1": 0.6865671641791045,
+    "val_images": 35
+  },
+  {
+    "class": "Scirtothrips dorsalis Hood",
+    "precision": 0.75,
+    "recall": 0.75,
+    "f1": 0.75,
+    "val_images": 80
+  },
+  {
+    "class": "Dasineura sp",
+    "precision": 0.639344262295082,
+    "recall": 0.78,
+    "f1": 0.7027027027027027,
+    "val_images": 50
+  },
+  {
+    "class": "Lawana imitata Melichar",
+    "precision": 0.8095238095238095,
+    "recall": 0.8793103448275862,
+    "f1": 0.8429752066115702,
+    "val_images": 58
+  },
+  {
+    "class": "Salurnis marginella Guerr",
+    "precision": 0.8636363636363636,
+    "recall": 0.7916666666666666,
+    "f1": 0.8260869565217391,
+    "val_images": 48
+  },
+  {
+    "class": "Deporaus marginatus Pascoe",
+    "precision": 0.8095238095238095,
+    "recall": 0.8095238095238095,
+    "f1": 0.8095238095238095,
+    "val_images": 21
+  },
+  {
+    "class": "Chlumetia transversa",
+    "precision": 0.5357142857142857,
+    "recall": 0.5,
+    "f1": 0.5172413793103449,
+    "val_images": 30
+  },
+  {
+    "class": "Mango flat beak leafhopper",
+    "precision": 0.75,
+    "recall": 0.6,
+    "f1": 0.6666666666666666,
+    "val_images": 10
+  },
+  {
+    "class": "Rhytidodera bowrinii white",
+    "precision": 0.8148148148148148,
+    "recall": 0.8,
+    "f1": 0.8073394495412844,
+    "val_images": 55
+  },
+  {
+    "class": "Sternochetus frigidus",
+    "precision": 0.8095238095238095,
+    "recall": 0.7391304347826086,
+    "f1": 0.7727272727272727,
+    "val_images": 46
+  },
+  {
+    "class": "Cicadellidae",
+    "precision": 0.9224137931034484,
+    "recall": 0.9336823734729494,
+    "f1": 0.9280138768430182,
+    "val_images": 573
+  }
+]

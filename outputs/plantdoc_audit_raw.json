@@ -1,0 +1,345 @@
+{
+  "total_classes": 28,
+  "train_classes_count": 28,
+  "test_classes_count": 27,
+  "classes_only_in_train": [
+    "Tomato two spotted spider mites leaf"
+  ],
+  "classes_only_in_test": [],
+  "total_raw_train_images": 2336,
+  "total_raw_test_images": 236,
+  "total_raw_images": 2572,
+  "corrupted_images_count": 0,
+  "corrupted_images": [],
+  "unique_hashes": 2560,
+  "exact_duplicates_in_train_count": 0,
+  "exact_duplicates_in_test_count": 0,
+  "cross_split_duplicates_count": 3,
+  "conflicting_label_duplicates_count": 9,
+  "cross_split_duplicate_samples": [
+    {
+      "hash": "ba5dcc6822fe97d13578703e2988b2ce",
+      "instances": [
+        [
+          "train",
+          "Blueberry leaf",
+          "train\\Blueberry leaf\\blueberry-leaves-normal-above-and-iron-deficient-below-bgahf8.jpg"
+        ],
+        [
+          "test",
+          "Blueberry leaf",
+          "test\\Blueberry leaf\\blueberry-leaves-normal-above-and-iron-deficient-below-bgahf8.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "5b4163adb2bd89b453328e8063b16f37",
+      "instances": [
+        [
+          "train",
+          "Tomato leaf yellow virus",
+          "train\\Tomato leaf yellow virus\\tylcv-seminar-1-638.jpg"
+        ],
+        [
+          "test",
+          "Tomato leaf yellow virus",
+          "test\\Tomato leaf yellow virus\\tylcv-seminar-1-638.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "3311a7162f523ef7dc4f5b02033d6ecf",
+      "instances": [
+        [
+          "train",
+          "Tomato Septoria leaf spot",
+          "train\\Tomato Septoria leaf spot\\early-blight-septoria-ls-fig-3.jpg"
+        ],
+        [
+          "test",
+          "Tomato Septoria leaf spot",
+          "test\\Tomato Septoria leaf spot\\early-blight-septoria-ls-fig-3.jpg"
+        ]
+      ]
+    }
+  ],
+  "conflicting_label_samples": [
+    {
+      "hash": "8edd2518767e8b140ffe3c6f3d37609d",
+      "instances": [
+        [
+          "train",
+          "Corn Gray leaf spot",
+          "train\\Corn Gray leaf spot\\2015070295153021.jpg"
+        ],
+        [
+          "test",
+          "Corn leaf blight",
+          "test\\Corn leaf blight\\2015070295153021.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "a5c506de47aa579eb224f2c2c398fb7f",
+      "instances": [
+        [
+          "train",
+          "Corn Gray leaf spot",
+          "train\\Corn Gray leaf spot\\corn-gray-leaf-spot-f4.jpg"
+        ],
+        [
+          "test",
+          "Corn leaf blight",
+          "test\\Corn leaf blight\\corn-gray-leaf-spot-f4.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "43ba8a87d9053032195c7c59bc01f1fc",
+      "instances": [
+        [
+          "train",
+          "Corn leaf blight",
+          "train\\Corn leaf blight\\IMG_42231.jpg"
+        ],
+        [
+          "test",
+          "Corn Gray leaf spot",
+          "test\\Corn Gray leaf spot\\IMG_42231.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "f163947415e9d4e42bdc23720bec8a49",
+      "instances": [
+        [
+          "train",
+          "Potato leaf early blight",
+          "train\\Potato leaf early blight\\1421_0.jpeg_itok=FMtmgePj.jpg"
+        ],
+        [
+          "test",
+          "Potato leaf late blight",
+          "test\\Potato leaf late blight\\1421_0.jpeg_itok=FMtmgePj.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "33eb423bdbbc3a6ce8941be10a278a72",
+      "instances": [
+        [
+          "train",
+          "Potato leaf early blight",
+          "train\\Potato leaf early blight\\18028_1.jpg"
+        ],
+        [
+          "train",
+          "Potato leaf late blight",
+          "train\\Potato leaf late blight\\24064_1.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "e4aff68ead58ba22a411c93db3a630af",
+      "instances": [
+        [
+          "train",
+          "Potato leaf early blight",
+          "train\\Potato leaf early blight\\5816740026_d42ef24413_Phytophthora-Infestans.jpg"
+        ],
+        [
+          "test",
+          "Potato leaf late blight",
+          "test\\Potato leaf late blight\\5816740026_d42ef24413_Phytophthora-Infestans.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "bd890a743a88bd8a8a3046bc74a3eda3",
+      "instances": [
+        [
+          "train",
+          "Potato leaf early blight",
+          "train\\Potato leaf early blight\\irish-blight-symptoms-on-potato-leaves-atmf8b.jpg"
+        ],
+        [
+          "test",
+          "Potato leaf late blight",
+          "test\\Potato leaf late blight\\irish-blight-symptoms-on-potato-leaves-atmf8b.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "ce0ad99cdbbf5dedccd96061c88a6d99",
+      "instances": [
+        [
+          "train",
+          "Potato leaf late blight",
+          "train\\Potato leaf late blight\\backus-056-potato-blight.jpg"
+        ],
+        [
+          "test",
+          "Potato leaf early blight",
+          "test\\Potato leaf early blight\\backus-056-potato-blight.jpg"
+        ]
+      ]
+    },
+    {
+      "hash": "1fc7b6d3ecba2fe90bbf8f6078fd7e45",
+      "instances": [
+        [
+          "train",
+          "Tomato Septoria leaf spot",
+          "train\\Tomato Septoria leaf spot\\tomato_V8.jpg"
+        ],
+        [
+          "test",
+          "Tomato leaf bacterial spot",
+          "test\\Tomato leaf bacterial spot\\tomato_V8.jpg"
+        ]
+      ]
+    }
+  ],
+  "per_class_counts": {
+    "Apple Scab Leaf": {
+      "train": 83,
+      "test": 10,
+      "total": 93
+    },
+    "Apple leaf": {
+      "train": 82,
+      "test": 9,
+      "total": 91
+    },
+    "Apple rust leaf": {
+      "train": 78,
+      "test": 10,
+      "total": 88
+    },
+    "Bell_pepper leaf": {
+      "train": 53,
+      "test": 8,
+      "total": 61
+    },
+    "Bell_pepper leaf spot": {
+      "train": 62,
+      "test": 9,
+      "total": 71
+    },
+    "Blueberry leaf": {
+      "train": 104,
+      "test": 11,
+      "total": 115
+    },
+    "Cherry leaf": {
+      "train": 47,
+      "test": 10,
+      "total": 57
+    },
+    "Corn Gray leaf spot": {
+      "train": 64,
+      "test": 4,
+      "total": 68
+    },
+    "Corn leaf blight": {
+      "train": 179,
+      "test": 12,
+      "total": 191
+    },
+    "Corn rust leaf": {
+      "train": 106,
+      "test": 10,
+      "total": 116
+    },
+    "Peach leaf": {
+      "train": 102,
+      "test": 9,
+      "total": 111
+    },
+    "Potato leaf early blight": {
+      "train": 108,
+      "test": 8,
+      "total": 116
+    },
+    "Potato leaf late blight": {
+      "train": 97,
+      "test": 8,
+      "total": 105
+    },
+    "Raspberry leaf": {
+      "train": 112,
+      "test": 7,
+      "total": 119
+    },
+    "Soyabean leaf": {
+      "train": 57,
+      "test": 8,
+      "total": 65
+    },
+    "Squash Powdery mildew leaf": {
+      "train": 124,
+      "test": 6,
+      "total": 130
+    },
+    "Strawberry leaf": {
+      "train": 88,
+      "test": 8,
+      "total": 96
+    },
+    "Tomato Early blight leaf": {
+      "train": 79,
+      "test": 9,
+      "total": 88
+    },
+    "Tomato Septoria leaf spot": {
+      "train": 140,
+      "test": 11,
+      "total": 151
+    },
+    "Tomato leaf": {
+      "train": 55,
+      "test": 8,
+      "total": 63
+    },
+    "Tomato leaf bacterial spot": {
+      "train": 101,
+      "test": 9,
+      "total": 110
+    },
+    "Tomato leaf late blight": {
+      "train": 101,
+      "test": 10,
+      "total": 111
+    },
+    "Tomato leaf mosaic virus": {
+      "train": 44,
+      "test": 10,
+      "total": 54
+    },
+    "Tomato leaf yellow virus": {
+      "train": 70,
+      "test": 6,
+      "total": 76
+    },
+    "Tomato mold leaf": {
+      "train": 85,
+      "test": 6,
+      "total": 91
+    },
+    "Tomato two spotted spider mites leaf": {
+      "train": 2,
+      "test": 0,
+      "total": 2
+    },
+    "grape leaf": {
+      "train": 57,
+      "test": 12,
+      "total": 69
+    },
+    "grape leaf black rot": {
+      "train": 56,
+      "test": 8,
+      "total": 64
+    }
+  }
+}

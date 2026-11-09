@@ -1,0 +1,13 @@
+{
+  "status": "DATASET_NOT_READY",
+  "searched_paths": [
+    "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102",
+    "\\kaggle\\input\\ip102",
+    "\\kaggle\\input\\ip102-dataset",
+    "\\kaggle\\input\\ip102-v1-1",
+    "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102"
+  ],
+  "message": "DATASET_NOT_READY: IP102 classification images (75,222 images) and official split lists (train.txt, val.txt, test.txt) were not found in any search path. Please ensure IP102 v1.1 classification archive is downloaded and extracted.",
+  "classes_detected": 102,
+  "training_executed": false
+}

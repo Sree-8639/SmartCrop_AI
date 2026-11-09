@@ -1,0 +1,75 @@
+{
+  "experiment_name": "Experiment_D_384px_ClassWeighted_Boosted",
+  "model_architecture": "ConvNeXt-Small (timm)",
+  "resolution": [384, 384],
+  "batch_size": 16,
+  "best_checkpoint": "epoch_16_ema",
+  "weights": "ema",
+  "tta_used": false,
+  "clean_training_evaluation": {
+    "accuracy": 0.9871,
+    "macro_precision": 0.9880,
+    "macro_recall": 0.9879,
+    "macro_f1": 0.9878,
+    "weighted_precision": 0.9874,
+    "weighted_recall": 0.9871,
+    "weighted_f1": 0.9871
+  },
+  "validation_results": {
+    "accuracy": 0.7885,
+    "macro_precision": 0.7894,
+    "macro_recall": 0.7740,
+    "macro_f1": 0.7699,
+    "weighted_precision": 0.7810,
+    "weighted_recall": 0.7885,
+    "weighted_f1": 0.7743,
+    "samples": 383
+  },
+  "held_out_test_results": {
+    "accuracy": 0.8120,
+    "macro_f1": 0.8009,
+    "evaluation_frequency": "evaluated_once_at_final_audit"
+  },
+  "per_class_validation_report": {
+    "Apple Scab Leaf": {"precision": 0.92, "recall": 0.79, "f1-score": 0.85, "support": 14},
+    "Apple leaf": {"precision": 0.93, "recall": 1.00, "f1-score": 0.97, "support": 14},
+    "Apple rust leaf": {"precision": 0.93, "recall": 1.00, "f1-score": 0.96, "support": 13},
+    "Bell_pepper leaf": {"precision": 0.88, "recall": 0.78, "f1-score": 0.82, "support": 9},
+    "Bell_pepper leaf spot": {"precision": 0.79, "recall": 1.00, "f1-score": 0.88, "support": 11},
+    "Blueberry leaf": {"precision": 0.85, "recall": 1.00, "f1-score": 0.92, "support": 17},
+    "Cherry leaf": {"precision": 0.89, "recall": 0.89, "f1-score": 0.89, "support": 9},
+    "Corn Gray leaf spot": {"precision": 0.75, "recall": 0.30, "f1-score": 0.43, "support": 10},
+    "Corn leaf blight": {"precision": 0.81, "recall": 0.89, "f1-score": 0.85, "support": 28},
+    "Corn rust leaf": {"precision": 0.85, "recall": 1.00, "f1-score": 0.92, "support": 17},
+    "Peach leaf": {"precision": 1.00, "recall": 0.88, "f1-score": 0.94, "support": 17},
+    "Potato leaf early blight": {"precision": 0.35, "recall": 0.35, "f1-score": 0.35, "support": 17},
+    "Potato leaf late blight": {"precision": 0.50, "recall": 0.53, "f1-score": 0.52, "support": 15},
+    "Raspberry leaf": {"precision": 1.00, "recall": 1.00, "f1-score": 1.00, "support": 18},
+    "Soyabean leaf": {"precision": 0.89, "recall": 0.80, "f1-score": 0.84, "support": 10},
+    "Squash Powdery mildew leaf": {"precision": 0.91, "recall": 1.00, "f1-score": 0.95, "support": 20},
+    "Strawberry leaf": {"precision": 1.00, "recall": 1.00, "f1-score": 1.00, "support": 14},
+    "Tomato Early blight leaf": {"precision": 0.50, "recall": 0.38, "f1-score": 0.43, "support": 13},
+    "Tomato Septoria leaf spot": {"precision": 0.61, "recall": 0.86, "f1-score": 0.72, "support": 22},
+    "Tomato leaf": {"precision": 0.67, "recall": 0.67, "f1-score": 0.67, "support": 9},
+    "Tomato leaf bacterial spot": {"precision": 0.40, "recall": 0.12, "f1-score": 0.19, "support": 16},
+    "Tomato leaf late blight": {"precision": 0.68, "recall": 0.76, "f1-score": 0.72, "support": 17},
+    "Tomato leaf mosaic virus": {"precision": 0.75, "recall": 0.38, "f1-score": 0.50, "support": 8},
+    "Tomato leaf yellow virus": {"precision": 0.82, "recall": 0.82, "f1-score": 0.82, "support": 11},
+    "Tomato mold leaf": {"precision": 0.65, "recall": 0.79, "f1-score": 0.71, "support": 14},
+    "grape leaf": {"precision": 1.00, "recall": 1.00, "f1-score": 1.00, "support": 10},
+    "grape leaf black rot": {"precision": 1.00, "recall": 0.90, "f1-score": 0.95, "support": 10}
+  },
+  "top_confusions_validation": [
+    {"count": 8, "true": "Tomato leaf bacterial spot", "predicted": "Tomato Septoria leaf spot"},
+    {"count": 6, "true": "Potato leaf early blight", "predicted": "Potato leaf late blight"},
+    {"count": 6, "true": "Corn Gray leaf spot", "predicted": "Corn leaf blight"},
+    {"count": 4, "true": "Tomato Early blight leaf", "predicted": "Potato leaf early blight"},
+    {"count": 3, "true": "Potato leaf late blight", "predicted": "Potato leaf early blight"},
+    {"count": 3, "true": "Potato leaf early blight", "predicted": "Tomato Early blight leaf"},
+    {"count": 2, "true": "Tomato mold leaf", "predicted": "Tomato Septoria leaf spot"},
+    {"count": 2, "true": "Tomato leaf yellow virus", "predicted": "Tomato leaf"},
+    {"count": 2, "true": "Tomato leaf mosaic virus", "predicted": "Tomato leaf yellow virus"},
+    {"count": 2, "true": "Tomato leaf late blight", "predicted": "Potato leaf late blight"}
+  ]
+}
+

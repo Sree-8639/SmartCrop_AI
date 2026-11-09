@@ -1,0 +1,9 @@
+,Training (10k clean subset),Validation,Test (held-out)
+Accuracy,92.11,77.33,76.89
+Top-5 accuracy,99.82,94.53,94.36
+Precision (macro),90.69,71.83,71.06
+Recall (macro),89.72,68.95,68.79
+F1 (macro),90.02,69.82,69.55
+Precision (weighted),92.17,76.87,76.39
+Recall (weighted),92.11,77.33,76.89
+F1 (weighted),92.03,76.85,76.47

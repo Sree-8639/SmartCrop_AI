@@ -1,0 +1,22 @@
+{
+  "plantdoc": {
+    "status": "EMPTY_DATASET",
+    "path": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\plantdoc",
+    "total_images": 0,
+    "classes_detected": 0
+  },
+  "ip102": {
+    "status": "EMPTY_DATASET",
+    "path": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\ip102",
+    "total_images": 0,
+    "images_with_bboxes": 0,
+    "annotation_format_detected": null
+  },
+  "cropharvest": {
+    "status": "EMPTY_DATASET",
+    "path": "C:\\Users\\shanm\\Downloads\\SmartCrop_AI\\datasets\\cropharvest",
+    "labels_found": false,
+    "features_found": false,
+    "band_availability_explanation": "CropHarvest provides pre-extracted time series. The standard 18-band representation includes: B2, B3, B4, B5, B6, B7, B8, B8A, B11, B12, temp, precip, elevation, slope, SAR vv, vh, ratio, and precalculated NDVI. If using a reduced tabular export where only NDVI or crop labels are included, NDMI = (B8 - B11)/(B8 + B11) cannot be directly computed and requires querying raw Sentinel-2 L2A scenes via Copernicus or Planetary Computer."
+  }
+}
