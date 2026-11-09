@@ -1,3 +1,14 @@
+---
+title: SmartCrop AI - Intelligent Agriculture Analysis
+emoji: 🌱
+colorFrom: green
+colorTo: emerald
+sdk: streamlit
+sdk_version: 1.41.0
+app_file: app/main.py
+pinned: false
+---
+
 # SmartCrop AI: Integrated Real-Time Crop Health Monitoring System
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
