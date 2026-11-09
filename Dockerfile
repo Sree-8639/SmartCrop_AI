@@ -34,6 +34,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application source code, models, and configurations
 COPY app/ ./app/
 COPY models/ ./models/
+COPY outputs/ ./outputs/
+COPY src/ ./src/
 COPY .streamlit/ ./.streamlit/
 COPY entrypoint.py .
 COPY README.md .

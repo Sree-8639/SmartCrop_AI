@@ -1,0 +1,30 @@
+.gcloudignore
+.git
+.github
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.vscode
+.idea
+*.log
+
+# Large local datasets (checkpoints are already in models/)
+data/
+datasets/
+raw_data/
+archive/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Scratch files
+*.png
+*.jpg
+check_*.png
+test_*.py
+inspect_*.py
+debug_*.py

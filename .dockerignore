@@ -1,0 +1,30 @@
+# Version control and caches
+.git
+.github
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.vscode
+.idea
+*.log
+
+# Heavy datasets not needed in production container (models already contain learned weights)
+data/
+datasets/
+raw_data/
+archive/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Scratch & temporary artifacts
+*.png
+*.jpg
+check_*.png
+test_*.py
+inspect_*.py
+debug_*.py
