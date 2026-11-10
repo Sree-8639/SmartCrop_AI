@@ -3,6 +3,14 @@ SmartCrop AI - Multi-Modal Agricultural Intelligence Platform
 Main Dashboard and System Overview
 """
 
+import sys
+from pathlib import Path
+
+# Force add project repository root to sys.path for Streamlit Community Cloud and Linux containers
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
 import pandas as pd
 from app.api.mock_service import get_all_subsystem_health

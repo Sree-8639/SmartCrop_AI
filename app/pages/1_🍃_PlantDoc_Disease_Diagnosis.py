@@ -3,7 +3,13 @@ SmartCrop AI - Page 1: PlantDoc Foliar Disease Diagnosis
 Provides diagnosis for 27 crop disease and health categories.
 """
 
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
 
 from app.components.theme import apply_custom_theme, render_sidebar_branding, render_page_header

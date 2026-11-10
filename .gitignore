@@ -38,3 +38,6 @@ Thumbs.db
 
 # Environment variables
 .env
+
+cloudflared.exe
+*.exe

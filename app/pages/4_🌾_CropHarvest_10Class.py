@@ -3,7 +3,13 @@ SmartCrop AI - Page 4: CropHarvest 10-Class Crop Group & Land-Cover Classificati
 Categorizes satellite time-series across 9 FAO crop groups and 1 land-cover class.
 """
 
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
 
 from app.components.theme import apply_custom_theme, render_sidebar_branding, render_page_header

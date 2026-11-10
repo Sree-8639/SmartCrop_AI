@@ -3,7 +3,13 @@ SmartCrop AI - Page 5: Unified Results & Model Comparison Dashboard
 Aggregates experimental metrics, ablation studies, and deployment readiness across all datasets.
 """
 
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import json
 import streamlit as st
 import pandas as pd

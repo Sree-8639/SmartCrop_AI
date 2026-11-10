@@ -3,7 +3,13 @@ SmartCrop AI - Page 3: CropHarvest Satellite Binary Classification
 Predicts whether a 12-month multi-spectral satellite time-series corresponds to actively cultivated crop land.
 """
 
+import sys
 from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import streamlit as st
 
 from app.components.theme import apply_custom_theme, render_sidebar_branding, render_page_header
