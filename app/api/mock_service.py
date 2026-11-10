@@ -283,21 +283,33 @@ def get_all_subsystem_health() -> List[SubsystemStatus]:
     Validation metrics are NEVER reported as test accuracy.
     """
     # 1. PlantDoc: Inspect verified checkpoint and test metrics from disk
+    plantdoc_exp_e_metrics = BASE_DIR / "outputs" / "plantdoc_experiment_E_metrics.json"
+    plantdoc_exp_e_ckpt = BASE_DIR / "models" / "disease" / "expE_convnext_small@384_s42.pth"
     plantdoc_path = BASE_DIR / "models" / "disease" / "disease_model_exp_D_best.pth"
     plantdoc_metrics = BASE_DIR / "outputs" / "plantdoc_experiment_D_boosted_metrics.json"
     plantdoc_central_metrics = BASE_DIR / "models" / "disease" / "disease_metrics.json"
     plantdoc_test_acc: Optional[float] = None
+    checkpoint_desc = None
 
-    if plantdoc_metrics.exists():
+    if plantdoc_exp_e_metrics.exists() and plantdoc_exp_e_ckpt.exists():
+        try:
+            with open(plantdoc_exp_e_metrics, "r", encoding="utf-8") as f:
+                d = json.load(f)
+                test_val = d.get("test_acc") or d.get("test_accuracy")
+                if test_val is not None:
+                    plantdoc_test_acc = round(float(test_val) * 100 if float(test_val) <= 1.0 else float(test_val), 2)
+            checkpoint_desc = "expE_ensemble (3x ConvNeXt, 83.55% Acc)"
+        except Exception:
+            plantdoc_test_acc = None
+
+    if plantdoc_test_acc is None and plantdoc_metrics.exists():
         try:
             with open(plantdoc_metrics, "r", encoding="utf-8") as f:
                 d = json.load(f)
-                # Check strictly for held-out test evaluation results
                 test_val = d.get("held_out_test_results", {}).get("accuracy")
                 if test_val is None:
                     test_val = d.get("test_accuracy") or d.get("test_acc")
                 if test_val is not None:
-                    # Normalize to percentage scale (0-100)
                     plantdoc_test_acc = round(float(test_val) * 100 if float(test_val) <= 1.0 else float(test_val), 2)
         except Exception:
             plantdoc_test_acc = None
@@ -313,10 +325,12 @@ def get_all_subsystem_health() -> List[SubsystemStatus]:
             plantdoc_test_acc = None
 
     # Checkpoint size display if file physically exists
-    checkpoint_desc = None
-    if plantdoc_path.exists():
-        size_mb = plantdoc_path.stat().st_size / (1024 * 1024)
-        checkpoint_desc = f"disease_model_exp_D_best.pth ({size_mb:.1f} MB)"
+    if checkpoint_desc is None:
+        if plantdoc_path.exists():
+            size_mb = plantdoc_path.stat().st_size / (1024 * 1024)
+            checkpoint_desc = f"disease_model_exp_D_best.pth ({size_mb:.1f} MB)"
+        elif plantdoc_exp_e_ckpt.exists():
+            checkpoint_desc = "expE_ensemble (3x ConvNeXt)"
 
     # 2. IP102 Classification & Detection
     ip102_cls_path = BASE_DIR / "models" / "pest" / "ip102_convnext_best.pth"

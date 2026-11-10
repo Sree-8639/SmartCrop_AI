@@ -42,12 +42,12 @@ with tab_overview:
     overview_data = [
         {
             "Pipeline Task": "🍃 PlantDoc Foliar Disease",
-            "Model Backbone": "ConvNeXt-Small (384px)",
+            "Model Backbone": "Experiment E ConvNeXt Ensemble (S@384 + B@384 + S@320)",
             "Diagnostic Scope": "27 Disease & Leaf Classes",
-            "Official Test Accuracy": "81.20%",
-            "Secondary Metric": "79.52% Macro-F1",
+            "Official Test Accuracy": "83.55%",
+            "Secondary Metric": "82.43% Macro-F1",
             "Inference Engine": "PyTorch / timm",
-            "Active Checkpoint": "disease_model_exp_D_best.pth (188.9 MB)"
+            "Active Checkpoint": "expE_ensemble (3x ConvNeXt Models)"
         },
         {
             "Pipeline Task": "🐛 IP102 Pest Species",
@@ -149,12 +149,32 @@ with tab_plantdoc:
     st.caption("Ablation study showing progression from initial baseline to State-of-the-Art Experiment D:")
 
     plantdoc_perf = [
-        {"Experiment Stage": "Baseline (ResNet-50 224px)", "Train Acc": "88.4%", "Val Acc": "51.2%", "Test Acc": "50.84%", "Notes": "Severe overfitting on web leaf crops"},
-        {"Experiment Stage": "Exp A (ConvNeXt-Small 224px)", "Train Acc": "91.8%", "Val Acc": "62.4%", "Test Acc": "61.35%", "Notes": "Modern 7x7 depthwise conv backbone"},
-        {"Experiment Stage": "Exp B (ConvNeXt + Weighted Loss)", "Train Acc": "94.6%", "Val Acc": "69.19%", "Test Acc": "68.15%", "Notes": "Class-imbalance mitigated"},
-        {"Experiment Stage": "Exp D (ConvNeXt-S 384px + EMA)", "Train Acc": "98.71%", "Val Acc": "78.85%", "Test Acc": "81.20%", "Notes": "🏆 State-of-the-Art (Production Deployed)"}
+        {"Experiment Stage": "Baseline (ResNet-50 224px)", "Train Acc": "88.40%", "Val Acc": "51.20%", "Test Acc": "50.84%", "Notes": "Severe overfitting on web leaf crops"},
+        {"Experiment Stage": "Exp A (ConvNeXt-Small 224px)", "Train Acc": "91.80%", "Val Acc": "62.40%", "Test Acc": "61.35%", "Notes": "Modern 7x7 depthwise conv backbone"},
+        {"Experiment Stage": "Exp B (ConvNeXt + Weighted Loss)", "Train Acc": "94.60%", "Val Acc": "69.19%", "Test Acc": "68.15%", "Notes": "Class-imbalance mitigated"},
+        {"Experiment Stage": "Exp D (ConvNeXt-S 384px + EMA)", "Train Acc": "98.71%", "Val Acc": "78.85%", "Test Acc": "81.20%", "Notes": "Strong Single-Model Baseline"},
+        {"Experiment Stage": "Exp E (3-Model ConvNeXt Ensemble)", "Train Acc": "98.60%", "Val Acc": "80.42%", "Test Acc": "83.55%", "Notes": "🏆 State-of-the-Art (Production Deployed - 82.43% Macro-F1)"}
     ]
     st.dataframe(pd.DataFrame(plantdoc_perf), hide_index=True, width="stretch")
+
+    exp_e_metrics_path = Path("outputs/plantdoc_experiment_E_metrics.json")
+    if exp_e_metrics_path.exists():
+        st.markdown("#### 🍃 Experiment E Ensemble Per-Class Benchmark Breakdown")
+        with open(exp_e_metrics_path, "r", encoding="utf-8") as f:
+            e_data = json.load(f)
+        rep = e_data.get("per_class_val_report", {})
+        rows = []
+        for cls_name, m in rep.items():
+            if isinstance(m, dict) and "precision" in m and cls_name not in ["macro avg", "weighted avg"]:
+                rows.append({
+                    "Pathology Condition": cls_name,
+                    "Precision": f"{m['precision']*100:.1f}%",
+                    "Recall": f"{m['recall']*100:.1f}%",
+                    "F1-Score": f"{m['f1-score']*100:.1f}%",
+                    "Test Samples": int(m.get("support", 0))
+                })
+        if rows:
+            st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
 
     curves_d = Path("outputs/plantdoc/experiment_D_curves.png")
     if curves_d.exists():

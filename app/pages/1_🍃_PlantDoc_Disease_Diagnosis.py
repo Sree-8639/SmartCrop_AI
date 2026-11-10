@@ -24,8 +24,8 @@ render_sidebar_branding()
 
 render_page_header(
     title="PlantDoc Foliar Disease Diagnosis",
-    subtitle="AI-driven foliar pathology diagnosis across 27 crop disease and healthy leaf classes using a fine-tuned ConvNeXt-Small backbone at 384×384px resolution.",
-    category_badge="ConvNeXt-Small • 81.20% Test Acc",
+    subtitle="AI-driven foliar pathology diagnosis across 27 crop disease and healthy leaf classes using a low-overfitting 3-Model ConvNeXt Ensemble (ConvNeXt-S@384 + ConvNeXt-B@384 + ConvNeXt-S@320).",
+    category_badge="Experiment E Ensemble • 83.55% Test Acc",
     icon="🍃"
 )
 
@@ -72,8 +72,9 @@ if img is not None:
         render_top_k_distribution(result.top_k, title="Top-5 Differential Diagnoses")
 
         st.info(
-            "💡 **Production Verification:** Evaluated with verified Experiment D checkpoint (`disease_model_exp_D_best.pth`, 188.87 MB). "
-            "Verified test accuracy: **81.20%**, Macro-F1: **79.52%**."
+            "💡 **Production Verification:** Powered by Experiment E 3-Model Ensemble (`expE_convnext_small@384_s42`, "
+            "`expE_convnext_base@384_s7`, and `expE_convnext_small@320_s123`). "
+            "Verified test accuracy: **83.55%**, Macro-F1: **82.43%**, Validation accuracy: **80.42%**."
         )
 else:
     st.info("👆 Please upload a leaf photograph or select a sample image above to initiate diagnosis.")

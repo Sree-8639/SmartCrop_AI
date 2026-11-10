@@ -16,3 +16,4 @@ echo.
 echo All SmartCrop AI servers have been stopped successfully.
 echo.
 pause
+

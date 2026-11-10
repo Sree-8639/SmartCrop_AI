@@ -121,12 +121,12 @@ with col_a:
                 <span style="font-size: 26px;">🍃</span>
                 <span style="display: inline-flex; align-items: center; gap: 6px; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; padding: 3px 9px; border-radius: 9999px; font-size: 11.5px; font-weight: 600;">
                     <span style="width: 6px; height: 6px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
-                    81.20% Test Acc
+                    83.55% Test Acc
                 </span>
             </div>
             <div style="font-size: 17px; font-weight: 700; color: #064e3b; margin-bottom: 6px;">1. Plant Disease Classification</div>
             <div style="font-size: 13.5px; color: #475569; line-height: 1.55;">
-                ConvNeXt-Small backbone trained at 384×384px resolution. Diagnoses foliar pathology across 27 crop disease and healthy leaf classes with strict weights verification.
+                Low-overfitting 3-Model ConvNeXt Ensemble (ConvNeXt-S@384 + ConvNeXt-B@384 + ConvNeXt-S@320). Diagnoses foliar pathology across 27 crop disease and healthy leaf classes.
             </div>
         </div>
         """,

@@ -12,3 +12,4 @@ if str(ROOT_DIR) not in sys.path:
 with open(ROOT_DIR / "app" / "main.py", encoding="utf-8") as f:
     code = compile(f.read(), str(ROOT_DIR / "app" / "main.py"), 'exec')
     exec(code, globals())
+

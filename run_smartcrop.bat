@@ -43,3 +43,4 @@ echo  Keep the server windows open while using the application.
 echo  To stop the application, double-click 'stop_smartcrop.bat'.
 echo ==============================================================================
 pause
+
