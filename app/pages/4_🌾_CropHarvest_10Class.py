@@ -15,7 +15,9 @@ import streamlit as st
 from app.components.theme import apply_custom_theme, render_sidebar_branding, render_page_header
 from app.components.uploader import render_array_uploader
 from app.components.result_card import render_prediction_summary, render_top_k_distribution
-from app.services.cropharvest_service import predict_cropharvest_10class_real
+from app.components.explanation_card import render_ai_explanation_section
+from app.services.cropharvest_service import predict_cropharvest_10class_real, parse_and_validate_satellite_array
+from app.services.lfm3_vl_service import LFM3VLService
 
 st.set_page_config(page_title="CropHarvest 10-Class Classification — SmartCrop AI", page_icon="🌾", layout="wide", initial_sidebar_state="expanded")
 
@@ -65,10 +67,21 @@ if filename is not None:
         with st.spinner("Executing 10-Class CropHarvest BiLSTM forward pass..."):
             try:
                 result = predict_cropharvest_10class_real(file_bytes=raw_bytes, filename=filename)
+                st.session_state["cropharvest_10c_result"] = result
+                st.session_state["cropharvest_10c_filename"] = filename
+                # Generate visual time-series chart for multimodal grounding
+                try:
+                    arr = parse_and_validate_satellite_array(raw_bytes, filename)
+                    chart_img = LFM3VLService.render_cropharvest_timeseries_chart(arr, filename=filename, title="10-Class Crop & Land-Cover Phenology")
+                    st.session_state["cropharvest_10c_chart"] = chart_img
+                except Exception:
+                    st.session_state["cropharvest_10c_chart"] = None
             except Exception as e:
                 st.error(f"10-Class inference failure: {e}")
                 st.stop()
 
+    if "cropharvest_10c_result" in st.session_state:
+        result = st.session_state["cropharvest_10c_result"]
         render_prediction_summary(
             title="Predicted Category",
             predicted_label=result.predicted_class,
@@ -82,6 +95,27 @@ if filename is not None:
         st.markdown("---")
         render_top_k_distribution(result.top_k, title="Top-5 Multi-Class Softmax Distribution")
 
+        # AI-Powered Explanation (LiquidAI / LFM3-VL-2B)
+        chart_img = st.session_state.get("cropharvest_10c_chart")
+        if chart_img is not None:
+            st.image(chart_img, caption="Multi-Spectral Phenological Trajectory (Provided to LFM3-VL-2B as visual evidence)", use_container_width=True)
 
+        render_ai_explanation_section(
+            module_name="cropharvest_10class",
+            prediction_result={
+                "predicted_class": result.predicted_class,
+                "confidence": result.confidence,
+                "category_type": result.category_type,
+                "class_index": result.class_index,
+                "top_k": [k.model_dump() if hasattr(k, "model_dump") else k.__dict__ for k in result.top_k]
+            },
+            structured_evidence={
+                "filename": st.session_state.get("cropharvest_10c_filename", filename),
+                "channels": result.channels_verified,
+                "timesteps": result.timesteps_verified
+            },
+            image=chart_img,
+            key_prefix="cropharvest_10class"
+        )
 else:
     st.info("👆 Please select or upload a satellite time-series file (.npy / .h5) above to initiate 10-class analysis.")

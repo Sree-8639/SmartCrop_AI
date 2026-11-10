@@ -20,6 +20,7 @@ from app.components.result_card import (
     render_top_k_distribution, 
     draw_bounding_boxes_on_image,
 )
+from app.components.explanation_card import render_ai_explanation_section
 from app.services.ip102_detection_service import predict_ip102_detection_real
 from app.services.ip102_service import predict_ip102_classification_real
 
@@ -77,13 +78,18 @@ if img is not None:
                         filename=filename or "pest.jpg", 
                         conf_threshold=conf_thresh
                     )
+                    annotated_img = draw_bounding_boxes_on_image(img, det_result.detected_boxes)
+                    st.session_state["ip102_det_result"] = det_result
+                    st.session_state["ip102_annotated_img"] = annotated_img
                 except Exception as e:
                     st.error(f"Detection inference failure: {e}")
                     st.stop()
 
+        if "ip102_det_result" in st.session_state:
+            det_result = st.session_state["ip102_det_result"]
+            annotated_img = st.session_state.get("ip102_annotated_img", img)
             col_img, col_metrics = st.columns([1, 1])
             with col_img:
-                annotated_img = draw_bounding_boxes_on_image(img, det_result.detected_boxes)
                 st.image(annotated_img, caption=f"YOLOv8 Localization: {det_result.total_pests_detected} targets identified", width="stretch")
             
             with col_metrics:
@@ -115,21 +121,35 @@ if img is not None:
                 else:
                     st.info("No pests detected above the selected confidence threshold. Try lowering the slider value.")
 
+            # AI-Powered Explanation (LiquidAI / LFM3-VL-2B)
+            boxes_payload = [b.model_dump() if hasattr(b, "model_dump") else b.__dict__ for b in det_result.detected_boxes]
+            render_ai_explanation_section(
+                module_name="ip102_detect",
+                prediction_result={"total_pests_detected": det_result.total_pests_detected},
+                detection_boxes=boxes_payload,
+                image=annotated_img,
+                key_prefix="ip102_detect"
+            )
+
     with tab_classify:
         st.markdown("#### Deep Taxonomic Species Classification")
         st.caption("Classifies the primary insect organism across the official 102 IP102 taxonomic hierarchy using ConvNeXt-Small.")
 
-        if st.button("🔬 Classify Pest Species", type="primary"):
+        run_cls = st.button("🔬 Classify Pest Species", type="primary")
+        if run_cls:
             with st.spinner("Analyzing pest anatomical morphology through ConvNeXt-Small..."):
                 try:
                     cls_result = predict_ip102_classification_real(
                         image_input=raw_bytes or img, 
                         filename=filename or "pest.jpg"
                     )
+                    st.session_state["ip102_cls_result"] = cls_result
                 except Exception as e:
                     st.error(f"Classification inference failure: {e}")
                     st.stop()
 
+        if "ip102_cls_result" in st.session_state:
+            cls_result = st.session_state["ip102_cls_result"]
             render_prediction_summary(
                 title="Identified Pest Species",
                 predicted_label=cls_result.predicted_pest,
@@ -141,6 +161,18 @@ if img is not None:
             )
             st.markdown("---")
             render_top_k_distribution(cls_result.top_k, title="Top-5 Differential Taxonomic Matches")
+
+            # AI-Powered Explanation (LiquidAI / LFM3-VL-2B)
+            render_ai_explanation_section(
+                module_name="ip102_classify",
+                prediction_result={
+                    "predicted_pest": cls_result.predicted_pest,
+                    "confidence": cls_result.confidence,
+                    "top_k": [k.model_dump() if hasattr(k, "model_dump") else k.__dict__ for k in cls_result.top_k]
+                },
+                image=raw_bytes or img,
+                key_prefix="ip102_classify"
+            )
 
 else:
     st.info("👆 Please upload a field pest image or select a sample image above to initiate analysis.")

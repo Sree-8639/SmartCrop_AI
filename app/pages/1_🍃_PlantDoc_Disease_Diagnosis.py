@@ -15,6 +15,7 @@ import streamlit as st
 from app.components.theme import apply_custom_theme, render_sidebar_branding, render_page_header
 from app.components.uploader import render_image_uploader
 from app.components.result_card import render_prediction_summary, render_top_k_distribution
+from app.components.explanation_card import render_ai_explanation_section
 from app.services.plantdoc_service import predict_plantdoc_real
 
 st.set_page_config(page_title="PlantDoc Disease Diagnosis — SmartCrop AI", page_icon="🍃", layout="wide", initial_sidebar_state="expanded")
@@ -54,10 +55,15 @@ if img is not None:
         with st.spinner("Executing ConvNeXt-Small (384px) neural forward pass..."):
             try:
                 result = predict_plantdoc_real(image_input=raw_bytes or img, filename=filename or "leaf.jpg")
+                st.session_state["plantdoc_last_result"] = result
+                st.session_state["plantdoc_last_img"] = raw_bytes or img
+                st.session_state["plantdoc_last_filename"] = filename or "leaf.jpg"
             except Exception as e:
                 st.error(f"Inference error: {e}")
                 st.stop()
 
+    if "plantdoc_last_result" in st.session_state:
+        result = st.session_state["plantdoc_last_result"]
         render_prediction_summary(
             title="Diagnosed Condition",
             predicted_label=result.predicted_class,
@@ -75,6 +81,20 @@ if img is not None:
             "💡 **Production Verification:** Powered by Experiment E 3-Model Ensemble (`expE_convnext_small@384_s42`, "
             "`expE_convnext_base@384_s7`, and `expE_convnext_small@320_s123`). "
             "Verified test accuracy: **83.55%**, Macro-F1: **82.43%**, Validation accuracy: **80.42%**."
+        )
+
+        # AI-Powered Explanation (LiquidAI / LFM3-VL-2B)
+        render_ai_explanation_section(
+            module_name="plantdoc",
+            prediction_result={
+                "predicted_class": result.predicted_class,
+                "confidence": result.confidence,
+                "top_k": [k.model_dump() if hasattr(k, "model_dump") else k.__dict__ for k in result.top_k],
+                "disease_severity": result.disease_severity
+            },
+            image=st.session_state.get("plantdoc_last_img"),
+            structured_evidence={"filename": st.session_state.get("plantdoc_last_filename")},
+            key_prefix="plantdoc"
         )
 else:
     st.info("👆 Please upload a leaf photograph or select a sample image above to initiate diagnosis.")

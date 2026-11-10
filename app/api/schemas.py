@@ -129,3 +129,36 @@ class SubsystemStatus(BaseModel):
     test_accuracy: Optional[float] = None
     classes_count: int
 
+
+# =============================================================================
+# Vision-Language Explanations (LiquidAI / LFM3-VL-2B)
+# =============================================================================
+class ExplanationRequest(BaseModel):
+    module_name: str = Field(..., description="Target module: plantdoc, ip102_classify, ip102_detect, cropharvest_binary, cropharvest_10class")
+    prediction_result: Dict[str, Any] = Field(..., description="Original model prediction dictionary")
+    structured_evidence: Optional[Dict[str, Any]] = Field(default_factory=dict, description="Metadata, top-k scores, sensor bands, or time-series statistics")
+    detection_boxes: Optional[List[Dict[str, Any]]] = Field(default_factory=list, description="YOLOv8 detected bounding boxes if applicable")
+    image_base64: Optional[str] = Field(default=None, description="Optional base64-encoded image string for visual grounding")
+
+
+class ExplanationResponse(BaseModel):
+    task: str = "Multimodal AI Explanation"
+    module_name: str
+    explanation: str
+    observations: List[str] = Field(default_factory=list)
+    prediction_summary: str
+    limitations: List[str] = Field(default_factory=list)
+    model_status: str
+    grounding_verified: bool = True
+    execution_time_ms: float = 0.0
+
+
+class LFM3HealthResponse(BaseModel):
+    model_id: str = "LiquidAI/LFM3-VL-2B"
+    is_loaded: bool
+    device: str
+    dtype: str
+    error: Optional[str] = None
+    status: str
+
+

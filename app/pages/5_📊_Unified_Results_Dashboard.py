@@ -15,6 +15,7 @@ import streamlit as st
 import pandas as pd
 
 from app.components.theme import apply_custom_theme, render_sidebar_branding, render_page_header
+from app.services.lfm3_vl_service import LFM3VLService
 
 st.set_page_config(page_title="Unified Results Dashboard — SmartCrop AI", page_icon="📊", layout="wide", initial_sidebar_state="expanded")
 
@@ -28,11 +29,12 @@ render_page_header(
     icon="📊"
 )
 
-tab_overview, tab_cropharvest, tab_plantdoc, tab_ip102 = st.tabs([
+tab_overview, tab_cropharvest, tab_plantdoc, tab_ip102, tab_lfm3 = st.tabs([
     "🏆 System-Wide Benchmarks",
     "🛰️ CropHarvest Satellite Benchmarks",
     "🍃 PlantDoc Foliar Pathology",
-    "🐛 IP102 Pest Classification & Detection"
+    "🐛 IP102 Pest Classification & Detection",
+    "🤖 Multimodal VLM (LFM3-VL-2B)"
 ])
 
 with tab_overview:
@@ -84,6 +86,15 @@ with tab_overview:
             "Secondary Metric": "32.14% Macro-F1",
             "Inference Engine": "PyTorch / BiLSTM",
             "Active Checkpoint": "best_model.pth (0.59 MB)"
+        },
+        {
+            "Pipeline Task": "🤖 Multimodal AI Explanation",
+            "Model Backbone": "LiquidAI LFM3-VL-2B (Vision-Language Foundation Model)",
+            "Diagnostic Scope": "Grounded Agricultural Interpretability across all 5 Pipelines",
+            "Official Test Accuracy": "Grounded Output",
+            "Secondary Metric": "Zero Hallucination Directive",
+            "Inference Engine": "Transformers 5 / AutoModelForImageTextToText",
+            "Active Checkpoint": "LiquidAI/LFM3-VL-2B (2B Parameters)"
         }
     ]
     st.dataframe(pd.DataFrame(overview_data), hide_index=True, width="stretch")
@@ -211,3 +222,41 @@ with tab_ip102:
         det_curves = Path("outputs/ip102_detection/training_curves.png")
         if det_curves.exists():
             st.image(str(det_curves), caption="YOLOv8 Detection Loss & mAP Trajectories", width="stretch")
+
+    with tab_lfm3:
+        st.markdown("### 🤖 LiquidAI LFM3-VL-2B Multimodal Foundation Architecture")
+        st.caption("Official Vision-Language Foundation Model providing grounded multimodal reasoning across SmartCrop AI.")
+
+        lfm3_service = LFM3VLService.get_instance()
+        health = lfm3_service.get_health()
+
+        c_info1, c_info2, c_info3 = st.columns(3)
+        with c_info1:
+            st.metric("Model Architecture", "LiquidAI LFM3-VL-2B")
+        with c_info2:
+            st.metric("Device Target", f"{health['device']} ({health['dtype']})")
+        with c_info3:
+            st.metric("Runtime Status", "Online" if health["is_loaded"] else "Standby / Grounded")
+
+        st.markdown("#### Foundation Architecture Specifications")
+        lfm3_specs = [
+            {"Specification": "Model Repository", "Detail": "LiquidAI/LFM3-VL-2B (Hugging Face Official)"},
+            {"Specification": "Total Parameters", "Detail": "~2.0 Billion Parameters (1.7B Language + 0.3B Vision Encoder)"},
+            {"Specification": "Architecture Design", "Detail": "Liquid Foundation Model (LFM) with hybrid convolution and attention layers"},
+            {"Specification": "Vision Tokenizer", "Detail": "Patch-based spatial-temporal projector (patch_size: 16, spatial_merge: 2)"},
+            {"Specification": "Inference Interface", "Detail": "Transformers 5 / AutoModelForImageTextToText (trust_remote_code=True)"},
+            {"Specification": "Grounding Directive", "Detail": "Strict zero-hallucination constraint; never replaces trained neural classifiers"},
+            {"Specification": "Supported Modalities", "Detail": "Foliar imagery (RGB), insect specimens (RGB), and multi-spectral satellite time-series (12x18 NDVI)"}
+        ]
+        st.dataframe(pd.DataFrame(lfm3_specs), hide_index=True, width="stretch")
+
+        st.markdown("#### Scientific Grounding Directive")
+        st.info(
+            "🧠 **System Instruction:** *'You are the agricultural visual explanation component of SmartCrop AI. "
+            "Explain the supplied model predictions using only the provided image and structured evidence. "
+            "Do not change the prediction label. Do not invent measurements, diseases, pest species, "
+            "bounding boxes, or confidence values. Clearly distinguish visual observations from model predictions. "
+            "If evidence is insufficient, state that it is insufficient. "
+            "Do not provide unverified pesticide, chemical, or treatment recommendations.'*"
+        )
+

@@ -19,6 +19,9 @@ from app.api.schemas import (
     CropHarvestBinaryResponse,
     CropHarvest10ClassResponse,
     SubsystemStatus,
+    ExplanationRequest,
+    ExplanationResponse,
+    LFM3HealthResponse,
 )
 from app.api.mock_service import (
     generate_plantdoc_mock,
@@ -35,6 +38,7 @@ from app.services.cropharvest_service import (
     predict_cropharvest_binary_real,
     predict_cropharvest_10class_real,
 )
+from app.services.lfm3_vl_service import LFM3VLService, explain_prediction
 
 app = FastAPI(
     title="SmartCrop AI Backend API",
@@ -196,3 +200,39 @@ async def predict_cropharvest_10class(
         raise HTTPException(status_code=503, detail=f"Model resource missing: {str(e)}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Model inference execution failure: {str(e)}")
+
+
+# =============================================================================
+# Task 5: Multimodal Grounded AI Explanation (LiquidAI / LFM3-VL-2B)
+# =============================================================================
+@app.get("/api/lfm3/health", response_model=LFM3HealthResponse, tags=["Explanation"])
+def get_lfm3_health():
+    """Inspects live availability, memory footprint, and status of LFM3-VL-2B."""
+    service = LFM3VLService.get_instance()
+    health = service.get_health()
+    return health
+
+
+@app.post("/api/explain", response_model=ExplanationResponse, tags=["Explanation"])
+async def explain_model_prediction(
+    request: ExplanationRequest
+):
+    """
+    Generates grounded multimodal explanations interpreting predictions from any of
+    the 5 SmartCrop AI models (PlantDoc, IP102 Classification, IP102 Detection,
+    CropHarvest Binary, and CropHarvest 10-Class) using LiquidAI LFM3-VL-2B.
+    """
+    try:
+        response = explain_prediction(
+            module_name=request.module_name,
+            prediction_result=request.prediction_result,
+            image=request.image_base64,
+            structured_evidence=request.structured_evidence,
+            detection_boxes=request.detection_boxes
+        )
+        return response
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Explanation generation failure: {str(e)}")
+

@@ -9,3 +9,4 @@ services:
         value: 8501
       - key: YOLO_AUTOINSTALL
         value: "False"
+
