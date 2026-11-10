@@ -82,9 +82,6 @@ if filename is not None:
         st.markdown("---")
         render_top_k_distribution(result.top_k, title="Top-5 Multi-Class Softmax Distribution")
 
-        st.info(
-            "💡 **Model Architecture:** Evaluated by production `CropHarvestBiLSTM` model trained on official splits. "
-            "Verified benchmark test accuracy: **68.22%**."
-        )
+
 else:
     st.info("👆 Please select or upload a satellite time-series file (.npy / .h5) above to initiate 10-class analysis.")
