@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smartcrop-ai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8501
+      - key: YOLO_AUTOINSTALL
+        value: "False"
